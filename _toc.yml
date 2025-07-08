@@ -1,0 +1,31 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Preamble
+    chapters:
+    - file: why-decorators-matter/index.md
+      sections:
+      - file: why-decorators-matter/functions-are-objects.md
+      - file: why-decorators-matter/functions-inside-functions.md
+      - file: why-decorators-matter/a-function-that-did-too-much.md
+      - file: why-decorators-matter/cache-wrapper.md
+      - file: why-decorators-matter/factory-of-caches.md
+      - file: why-decorators-matter/closures-are-bubbles.md
+      - file: why-decorators-matter/exercises.md
+      - file: why-decorators-matter/summary.md
+  - caption: Decorators
+    chapters:
+      - file: your-first-decorator/index.md
+        sections:
+        - file: your-first-decorator/decorator-pattern.md
+        - file: your-first-decorator/decorator-syntax.md
+        - file: your-first-decorator/orthogonality.md
+        - file: your-first-decorator/exercises.md
+        - file: your-first-decorator/summary.md
+      - file: general-decorators/index.md
+        sections:
+        - file: general-decorators/caching-combinations.md
+        - file: general-decorators/fixed-number-of-arguments.md

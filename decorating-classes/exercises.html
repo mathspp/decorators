@@ -409,7 +409,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -425,6 +427,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-repr"><code class="docutils literal notranslate"><span class="pre">auto_repr</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordering"><code class="docutils literal notranslate"><span class="pre">ordering</span></code></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -436,6 +447,45 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
+<p>These exercises focus on writing decorators (that might be functions or classes, you decide) that are then applied to classes.</p>
+<section id="auto-repr">
+<h2><code class="docutils literal notranslate"><span class="pre">auto_repr</span></code><a class="headerlink" href="#auto-repr" title="Link to this heading">#</a></h2>
+<p>Write a decorator <code class="docutils literal notranslate"><span class="pre">auto_repr</span></code> that automatically adds a pretty <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> to a class.
+You can use the built-in <code class="docutils literal notranslate"><span class="pre">vars</span></code> to inspect the attributes of an object, and assume that’s good enough.</p>
+<p>If you’re successful, the snippet below should work:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nd">@auto_repr</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>  <span class="c1"># Point(x=1, y=2)</span>
+</pre></div>
+</div>
+</section>
+<section id="ordering">
+<h2><code class="docutils literal notranslate"><span class="pre">ordering</span></code><a class="headerlink" href="#ordering" title="Link to this heading">#</a></h2>
+<p>Write a decorator <code class="docutils literal notranslate"><span class="pre">ordering</span></code> that automatically adds the comparison dunder methods to a class.
+The decorator <code class="docutils literal notranslate"><span class="pre">ordering</span></code> is applied to classes that have the methods <code class="docutils literal notranslate"><span class="pre">__eq__</span></code> and <code class="docutils literal notranslate"><span class="pre">__lt__</span></code>, and from that you’re supposed to add the methods <code class="docutils literal notranslate"><span class="pre">__le__</span></code>, <code class="docutils literal notranslate"><span class="pre">__gt__</span></code>, and <code class="docutils literal notranslate"><span class="pre">__ge__</span></code>, so that the class can be used in all types of comparisons.</p>
+<p>If you’re successful, the snippet below should work:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nd">@ordering</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyInt</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MyInt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">MyInt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MyInt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">MyInt</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>  <span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MyInt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">MyInt</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># True</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -492,6 +542,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-repr"><code class="docutils literal notranslate"><span class="pre">auto_repr</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordering"><code class="docutils literal notranslate"><span class="pre">ordering</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

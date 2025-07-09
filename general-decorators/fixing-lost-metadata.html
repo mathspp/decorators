@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Initial structure &#8212; Decorators masterclass</title>
+    <title>Fixing lost metadata &#8212; Decorators masterclass</title>
   
   
   
@@ -57,9 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_ideas/_ideas';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'general-decorators/fixing-lost-metadata';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Decorator blueprint" href="decorator-blueprint.html" />
+    <link rel="prev" title="Losing metadata" href="losing-metadata.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +123,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -194,7 +194,7 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Decorators</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../your-first-decorator/index.html">Your first decorator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../your-first-decorator/decorator-pattern.html">Decorator pattern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../your-first-decorator/decorator-syntax.html">Decorator syntax</a></li>
@@ -203,18 +203,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../your-first-decorator/summary.html">Summary</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../general-decorators/index.html">General decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/caching-combinations.html">Caching combinations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/fixed-number-of-arguments.html">Fixed number of arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/accepting-a-variable-number-of-arguments.html">Accepting a variable number of arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/cache-for-general-functions.html">Cache for general functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/caching-is-really-useful-right.html">Caching is really useful, right?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/accepting-a-variable-number-of-keyword-arguments.html">Accepting a variable number of keyword arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/general-signatures.html">General signatures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/losing-metadata.html">Losing metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/fixing-lost-metadata.html">Fixing lost metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/decorator-blueprint.html">Decorator blueprint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">General decorators</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="caching-combinations.html">Caching combinations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fixed-number-of-arguments.html">Fixed number of arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="accepting-a-variable-number-of-arguments.html">Accepting a variable number of arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cache-for-general-functions.html">Cache for general functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching-is-really-useful-right.html">Caching is really useful, right?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="accepting-a-variable-number-of-keyword-arguments.html">Accepting a variable number of keyword arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general-signatures.html">General signatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="losing-metadata.html">Losing metadata</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fixing lost metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="decorator-blueprint.html">Decorator blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
 </ul>
 </details></li>
 </ul>
@@ -292,7 +292,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_ideas/_ideas.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgeneral-decorators/fixing-lost-metadata.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -322,7 +322,7 @@
       
       
       
-      <li><a href="../_sources/_ideas/_ideas.md" target="_blank"
+      <li><a href="../_sources/general-decorators/fixing-lost-metadata.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -393,9 +393,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -406,25 +404,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Initial structure</h1>
+    <h1>Fixing lost metadata</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-why-decorators-matter-4060-min">🧠 Section 1 – Why Decorators Matter (40–60 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-from-higher-order-functions-to-decorators-4560-min">🧱 Section 2 – From Higher-Order Functions to Decorators (45–60 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-writing-general-and-useful-decorators-6075-min">🛠️ Section 3 – Writing General and Useful Decorators (60–75 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-customising-decorators-with-arguments-6075-min">⚙️ Section 4 – Customising Decorators with Arguments (60–75 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-class-based-decorators-4560-min">🧱 Section 5 – Class-Based Decorators (45–60 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-decorating-classes-3045-min">🧑‍🏫 Section 6 – Decorating Classes (30–45 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-section-review-and-wrap-up-2030-min">🎓 Final Section – Review and Wrap-Up (20–30 min)</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -434,131 +418,72 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="initial-structure">
-<h1>Initial structure<a class="headerlink" href="#initial-structure" title="Link to this heading">#</a></h1>
-<p>Excellent — that gives me the freedom to shape a truly effective course while grounding the content in your well-crafted blog post. I’ll make sure to clearly note any deviations from the original article and explain the pedagogical reasoning behind them.</p>
-<p>Now that I have everything I need, I’ll begin drafting a <strong>detailed course outline</strong> consisting of:</p>
-<ul class="simple">
-<li><p>Sections (~30–90 minutes each),</p></li>
-<li><p>Lessons (~5-minute videos),</p></li>
-<li><p>Suggestions for where to insert “solve together” exercise videos,</p></li>
-<li><p>Notes about where the outline deviates from the blog post and why.</p></li>
-</ul>
-<p>This will take a moment — I’ll draft it now.</p>
-<p>Thanks for waiting. I’ve reviewed the full structure and I’m now ready to present a <strong>draft course outline</strong> based on your article, broken down into short, focused video lessons grouped into coherent sections.</p>
-<p>I’ll include:</p>
-<ul class="simple">
-<li><p>Section titles (representing groups of videos),</p></li>
-<li><p>Individual lesson titles (each a ~5-minute video),</p></li>
-<li><p>Occasional “solve together” videos,</p></li>
-<li><p>And I’ll call out and explain any <strong>deviations</strong> from the blog post structure.</p></li>
-</ul>
-<hr class="docutils" />
-<section id="section-1-why-decorators-matter-4060-min">
-<h2>🧠 Section 1 – Why Decorators Matter (40–60 min)<a class="headerlink" href="#section-1-why-decorators-matter-4060-min" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Motivate the decorator pattern and build foundational understanding of functions and higher-order functions.</p>
-<ol class="arabic simple">
-<li><p><strong>Introduction – What This Course Will Teach You</strong></p></li>
-<li><p><strong>The Problem: A Function That Did Too Much</strong>
-(based on <em>“A function that did too much”</em>)</p></li>
-<li><p><strong>Wrapping Functions Without Changing Them</strong>
-(from <em>“Factoring out the orthogonal behaviour”</em>)</p></li>
-<li><p><strong>Duplicated Logic: Time to Generalise</strong></p></li>
-<li><p><strong>Introducing Higher-Order Functions</strong>
-(based on <em>“A factory of cached functions”</em>)</p></li>
-<li><p><strong>Closure Mechanics Explained</strong></p></li>
-<li><p><strong>First Exercise Break (self-guided)</strong></p></li>
-<li><p><strong>Solve Together: Build a Simple Cache Decorator</strong></p></li>
-</ol>
-<p><strong>🟢 Deviation</strong>:
-I’m pulling forward the explanation of closures slightly earlier than the blog post to ensure students understand why caching works before we go further. This helps avoid confusion when they see cached functions “magically” remember values.</p>
-</section>
-<hr class="docutils" />
-<section id="section-2-from-higher-order-functions-to-decorators-4560-min">
-<h2>🧱 Section 2 – From Higher-Order Functions to Decorators (45–60 min)<a class="headerlink" href="#section-2-from-higher-order-functions-to-decorators-4560-min" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Transition from function factories to Python’s <code class="docutils literal notranslate"><span class="pre">&#64;decorator</span></code> syntax.</p>
-<ol class="arabic simple">
-<li><p><strong>The Decorator Pattern and Its Syntax</strong>
-(based on <em>“The decorator pattern”</em>)</p></li>
-<li><p><strong>Applying Decorators with and without <code class="docutils literal notranslate"><span class="pre">&#64;</span></code></strong></p></li>
-<li><p><strong>Decorator Mindset: Enhancing Orthogonal Functionality</strong></p></li>
-<li><p><strong>Exercise Break: Reimplement and Apply Cache and Timed Decorators</strong></p></li>
-<li><p><strong>Solve Together: Decorate Fibonacci and Benchmark It</strong></p></li>
-</ol>
-<p><strong>🟢 Deviation</strong>:
-I’ve extracted and emphasized the mindset behind decorators (orthogonal enhancement) as its own short video — it’s implicit in your article but worth surfacing explicitly for pedagogical clarity.</p>
-</section>
-<hr class="docutils" />
-<section id="section-3-writing-general-and-useful-decorators-6075-min">
-<h2>🛠️ Section 3 – Writing General and Useful Decorators (60–75 min)<a class="headerlink" href="#section-3-writing-general-and-useful-decorators-6075-min" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Make decorators robust, reusable, and practical.</p>
-<ol class="arabic simple">
-<li><p><strong>Why <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> Are Essential</strong>
-(from <em>“Implementing general decorators”</em>)</p></li>
-<li><p><strong>Refactoring the Cache Decorator</strong></p></li>
-<li><p><strong>How to Benchmark Any Function</strong>
-(based on <em>“timed” decorator updates</em>)</p></li>
-<li><p><strong>The Decorator Blueprint (Anatomy)</strong>
-(based on <em>“Anatomy of a decorator”</em>)</p></li>
-<li><p><strong>Common Pitfalls: Metadata Loss</strong></p></li>
-<li><p><strong>Fixing Metadata with <code class="docutils literal notranslate"><span class="pre">functools.wraps</span></code></strong></p></li>
-<li><p><strong>Solve Together: Fix a Broken Decorator Without <code class="docutils literal notranslate"><span class="pre">wraps</span></code></strong></p></li>
-<li><p><strong>Exercise Break (self-guided)</strong></p></li>
-</ol>
-</section>
-<hr class="docutils" />
-<section id="section-4-customising-decorators-with-arguments-6075-min">
-<h2>⚙️ Section 4 – Customising Decorators with Arguments (60–75 min)<a class="headerlink" href="#section-4-customising-decorators-with-arguments-6075-min" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Learn how and why to build decorators that accept parameters.</p>
-<ol class="arabic simple">
-<li><p><strong>Motivation: Customising a Cache’s Size</strong></p></li>
-<li><p><strong>The Problem with <code class="docutils literal notranslate"><span class="pre">&#64;cache(1000)</span></code></strong></p></li>
-<li><p><strong>The Solution: A Decorator Factory</strong></p></li>
-<li><p><strong>Optional Arguments and Smart Decorators</strong>
-(based on <em>“To parens or not to parens?”</em>)</p></li>
-<li><p><strong>Exercise Break: Custom Cache with Max Size</strong></p></li>
-<li><p><strong>Solve Together: Implement a Decorator with Arguments</strong></p></li>
-</ol>
-<p><strong>🟢 Deviation</strong>:
-The article mixes “wraps” and decorator-with-arguments topics. Here, I’m grouping everything about decorators with arguments into one focused section to reinforce the concept as its own skill.</p>
-</section>
-<hr class="docutils" />
-<section id="section-5-class-based-decorators-4560-min">
-<h2>🧱 Section 5 – Class-Based Decorators (45–60 min)<a class="headerlink" href="#section-5-class-based-decorators-4560-min" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Teach decorators as classes and when/why to use them.</p>
-<ol class="arabic simple">
-<li><p><strong>Functions Are Objects – So Are Classes</strong></p></li>
-<li><p><strong>The Case for Class-Based Decorators</strong></p></li>
-<li><p><strong>Implementing a Class-Based Cache Decorator</strong>
-(based on <em>“Classes as decorators”</em>)</p></li>
-<li><p><strong>Enhancing Decorated Functions with Attributes</strong></p></li>
-<li><p><strong>Decorator Arguments + Classes = Clean Separation</strong></p></li>
-<li><p><strong>Solve Together: <code class="docutils literal notranslate"><span class="pre">timed</span></code> as a Class-Based Decorator</strong></p></li>
-<li><p><strong>Exercise Break (self-guided)</strong></p></li>
-</ol>
-</section>
-<hr class="docutils" />
-<section id="section-6-decorating-classes-3045-min">
-<h2>🧑‍🏫 Section 6 – Decorating Classes (30–45 min)<a class="headerlink" href="#section-6-decorating-classes-3045-min" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Show decorators that target class definitions, not just functions.</p>
-<ol class="arabic simple">
-<li><p><strong>Yes, Classes Can Be Decorated Too</strong></p></li>
-<li><p><strong>When to Use Class Decorators</strong></p></li>
-<li><p><strong>Solve Together: Implement an <code class="docutils literal notranslate"><span class="pre">&#64;add_repr</span></code> Decorator</strong></p></li>
-<li><p><strong>Exercise Break (self-guided)</strong></p></li>
-</ol>
-</section>
-<hr class="docutils" />
-<section id="final-section-review-and-wrap-up-2030-min">
-<h2>🎓 Final Section – Review and Wrap-Up (20–30 min)<a class="headerlink" href="#final-section-review-and-wrap-up-2030-min" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Review what was learned, offer next steps.</p>
-<ol class="arabic simple">
-<li><p><strong>The Decorator Toolbox: Review of Key Ideas</strong></p></li>
-<li><p><strong>Quiz or Recap Exercise Suggestions</strong></p></li>
-<li><p><strong>Next Steps: Fun Projects and Decorators in the Real World</strong></p></li>
-<li><p><strong>Outro and Thanks</strong></p></li>
-</ol>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="fixing-lost-metadata">
+<h1>Fixing lost metadata<a class="headerlink" href="#fixing-lost-metadata" title="Link to this heading">#</a></h1>
+<p>As it turns out, function metadata like its name and its docstring can be accessed through certain attributes:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_function</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This is the docstring of a function.&quot;&quot;&quot;</span>
+    <span class="o">...</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_function</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>  <span class="c1"># my_function</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_function</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>  <span class="c1"># This is the docstring of a function.</span>
+</pre></div>
+</div>
+<p>Therefore, to make it so that a decorator produces a wrapper that <em>looks</em> like the original function, all you have to do is patch up these attributes <code class="docutils literal notranslate"><span class="pre">__name__</span></code>, <code class="docutils literal notranslate"><span class="pre">__doc__</span></code>, and others, and the wrapper function will <em>look</em> like the original function!</p>
+<p>You could do this by hand in all of your decorators before returning the wrapper:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">timed_factory</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">timed_f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+
+    <span class="c1"># Patch some metadata:</span>
+    <span class="n">timed_f</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="vm">__name__</span>
+    <span class="n">timed_f</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="vm">__doc__</span>
+    <span class="k">return</span> <span class="n">timed_f</span>
+</pre></div>
+</div>
+<p>And this is a start, indeed.
+Try applying this version of the decorator <code class="docutils literal notranslate"><span class="pre">timed_factory</span></code> to the function <code class="docutils literal notranslate"><span class="pre">fibonacci</span></code> as shown below:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nd">@timed_factory</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes the recurrence relation F(n) = F(n - 1) + F(n - 2).&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, running <code class="docutils literal notranslate"><span class="pre">help(fibonacci)</span></code> shows a <em>better</em> help screen than before, although it isn’t perfect yet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">fibonacci</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
+
+<span class="n">fibonacci</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">Computes</span> <span class="n">the</span> <span class="n">recurrence</span> <span class="n">relation</span> <span class="n">F</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">F</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span>
+ <span class="n">Help</span> <span class="n">on</span> <span class="n">timed_factory</span><span class="o">.&lt;</span><span class="nb">locals</span><span class="o">&gt;.</span><span class="n">timed_f</span> <span class="n">line</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span> <span class="p">(</span><span class="n">END</span><span class="p">)</span> <span class="p">(</span><span class="n">press</span> <span class="n">h</span> <span class="k">for</span> <span class="n">help</span> <span class="ow">or</span> <span class="n">q</span> <span class="n">to</span> <span class="n">quit</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note how the signature of <code class="docutils literal notranslate"><span class="pre">fibonacci</span></code> is shown to be <code class="docutils literal notranslate"><span class="pre">(*args,</span> <span class="pre">**kwargs)</span></code> and how the final line still says you are getting help regarding the function <code class="docutils literal notranslate"><span class="pre">timed_factory.&lt;locals&gt;.timed_f</span></code>.</p>
+<p>The best way to patch all of the metadata is by using <em>another decorator</em> called <code class="docutils literal notranslate"><span class="pre">functools.wraps</span></code>!
+This decorator from the standard library must be used <em>inside</em> your decorator, around the wrapper function, and it accepts the original function as an argument, like so:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">functools</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">timed_factory</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="c1"># &lt;--</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">timed_f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+
+    <span class="k">return</span> <span class="n">timed_f</span>
+</pre></div>
+</div>
+<p>The line <code class="docutils literal notranslate"><span class="pre">&#64;functools.wraps(f)</span></code> says “the function <code class="docutils literal notranslate"><span class="pre">timed_f</span></code> will replace the function <code class="docutils literal notranslate"><span class="pre">f</span></code>, so transfer <code class="docutils literal notranslate"><span class="pre">f</span></code>’s metadata to <code class="docutils literal notranslate"><span class="pre">timed_f</span></code>”.
+And this was the last ingredient you needed!
+Now, you have all the tools you might require to write any decorators you might need.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -574,7 +499,7 @@ The article mixes “wraps” and decorator-with-arguments topics. Here, I’m g
         },
         kernelOptions: {
             name: "python3",
-            path: "./_ideas"
+            path: "./general-decorators"
         },
         predefinedOutput: true
     }
@@ -591,33 +516,30 @@ The article mixes “wraps” and decorator-with-arguments topics. Here, I’m g
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="losing-metadata.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Losing metadata</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="decorator-blueprint.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Decorator blueprint</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-why-decorators-matter-4060-min">🧠 Section 1 – Why Decorators Matter (40–60 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-from-higher-order-functions-to-decorators-4560-min">🧱 Section 2 – From Higher-Order Functions to Decorators (45–60 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-writing-general-and-useful-decorators-6075-min">🛠️ Section 3 – Writing General and Useful Decorators (60–75 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-customising-decorators-with-arguments-6075-min">⚙️ Section 4 – Customising Decorators with Arguments (60–75 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-class-based-decorators-4560-min">🧱 Section 5 – Class-Based Decorators (45–60 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-decorating-classes-3045-min">🧑‍🏫 Section 6 – Decorating Classes (30–45 min)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-section-review-and-wrap-up-2030-min">🎓 Final Section – Review and Wrap-Up (20–30 min)</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

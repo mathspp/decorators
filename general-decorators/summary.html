@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Accepting a variable number of arguments &#8212; Decorators masterclass</title>
+    <title>Summary &#8212; Decorators masterclass</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'general-decorators/accepting-a-variable-number-of-arguments';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'general-decorators/summary';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cache for general functions" href="cache-for-general-functions.html" />
-    <link rel="prev" title="Fixed number of arguments" href="fixed-number-of-arguments.html" />
+    <link rel="next" title="Decorators with arguments" href="../decorators-with-arguments/index.html" />
+    <link rel="prev" title="Exercises" href="exercises.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -206,7 +206,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">General decorators</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="caching-combinations.html">Caching combinations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fixed-number-of-arguments.html">Fixed number of arguments</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Accepting a variable number of arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="accepting-a-variable-number-of-arguments.html">Accepting a variable number of arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cache-for-general-functions.html">Cache for general functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching-is-really-useful-right.html">Caching is really useful, right?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="accepting-a-variable-number-of-keyword-arguments.html">Accepting a variable number of keyword arguments</a></li>
@@ -215,7 +215,7 @@
 <li class="toctree-l2"><a class="reference internal" href="fixing-lost-metadata.html">Fixing lost metadata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="decorator-blueprint.html">Decorator blueprint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Summary</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -308,7 +308,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgeneral-decorators/accepting-a-variable-number-of-arguments.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgeneral-decorators/summary.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -338,7 +338,7 @@
       
       
       
-      <li><a href="../_sources/general-decorators/accepting-a-variable-number-of-arguments.md" target="_blank"
+      <li><a href="../_sources/general-decorators/summary.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -420,7 +420,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Accepting a variable number of arguments</h1>
+    <h1>Summary</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -434,50 +434,18 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="accepting-a-variable-number-of-arguments">
-<h1>Accepting a variable number of arguments<a class="headerlink" href="#accepting-a-variable-number-of-arguments" title="Link to this heading">#</a></h1>
-<p>The built-in function <code class="docutils literal notranslate"><span class="pre">max</span></code> can accept an arbitrary number of arguments:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># 1</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># 2</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># 3</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  <span class="c1"># 4</span>
-<span class="o">...</span>
-</pre></div>
-</div>
-<p>There are other built-ins that do that…
-But you can also write functions that behave in this way.</p>
-<p>In Python, for a function to accept a number of arbitrary arguments, you just add an asterisk <code class="docutils literal notranslate"><span class="pre">*</span></code> to the left of the parameter that represents the “arbitrary number of arguments” that the user might pass in.
-Usually, in the Python world, we call it <code class="docutils literal notranslate"><span class="pre">*args</span></code> (pronounced “star args”).</p>
-<p>The parameter that gets the asterisk <code class="docutils literal notranslate"><span class="pre">*</span></code> next to it will then be a <em>tuple</em> with whatever values the user passed in.
-Here is an example of a function that accepts a variable number of arguments and whose only functionality is printing those same arguments:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">print_star_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>If you use the function <code class="docutils literal notranslate"><span class="pre">print_star_args</span></code> with a couple of different arguments, you will see that the variable <code class="docutils literal notranslate"><span class="pre">args</span></code> is always a tuple:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">print_star_args</span><span class="p">()</span>  <span class="c1"># ()</span>
-<span class="n">print_star_args</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># (True,)</span>
-<span class="n">print_star_args</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># (1, 2, 3)</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">*args</span></code> can also be used after some positional arguments, in which case the function accepts as many positional arguments as specified, plus an arbitrary number of arguments.
-For example, the function <code class="docutils literal notranslate"><span class="pre">add_two_or_more</span></code> shown below accepts two mandatory positional arguments, plus as many arguments as you want.
-But the minimum number of arguments that are accepted is two:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">add_two_or_more</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">add_two_or_more</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># 3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">add_two_or_more</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># 21</span>
-</pre></div>
-</div>
-<p>As a quick comprehension check, can you implement a function <code class="docutils literal notranslate"><span class="pre">my_max</span></code> that accepts a variable number of arguments and then returns the maximum value?
-If you do it right, the snippet of code below should work:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_max</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># 1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># 2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># 3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  <span class="c1"># 4</span>
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
+<p>Well done making it this far!
+After going through this section, you should know that</p>
+<ul class="simple">
+<li><p>decorators typically use <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> to work with general functions;</p></li>
+<li><p>decorators can preserve the metadata of the decorated function with <code class="docutils literal notranslate"><span class="pre">functools.wraps</span></code>; and</p></li>
+<li><p>there is a common <a class="reference internal" href="decorator-blueprint.html"><span class="std std-doc">decorator blueprint</span></a> that you can use as a reference when writing decorators.</p></li>
+</ul>
+<p>Now that you’ve written some decorators and you’re more comfortable with their syntax, you will learn how to write decorators that are more broadly useful.</p>
+<hr class="docutils" />
+<p>If you have any feedback, <a class="reference external" href="mailto:rodrigo&#37;&#52;&#48;mathspp&#46;com">reach out to me at rodrigo<span>&#64;</span>mathspp<span>&#46;</span>com</a>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -511,20 +479,20 @@ If you do it right, the snippet of code below should work:</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="fixed-number-of-arguments.html"
+       href="exercises.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Fixed number of arguments</p>
+        <p class="prev-next-title">Exercises</p>
       </div>
     </a>
     <a class="right-next"
-       href="cache-for-general-functions.html"
+       href="../decorators-with-arguments/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cache for general functions</p>
+        <p class="prev-next-title">Decorators with arguments</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

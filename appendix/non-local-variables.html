@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/non-local-variables';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Exercises" href="../general-decorators/exercises.html" />
+    <link rel="prev" title="Exercises" href="../decorating-classes/exercises.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -214,6 +214,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../general-decorators/fixing-lost-metadata.html">Fixing lost metadata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general-decorators/decorator-blueprint.html">Decorator blueprint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/summary.html">Summary</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/exercises.html">Exercises</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Decorators &amp; classes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../classes-as-decorators/index.html">Classes as decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/exercises.html">Exercises</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../decorating-classes/index.html">Decorating classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/exercises.html">Exercises</a></li>
 </ul>
 </details></li>
 </ul>
@@ -419,6 +435,27 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="non-local-variables">
 <h1>Non-local variables<a class="headerlink" href="#non-local-variables" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This needs to be properly written up.</p>
+</div>
+<p>To modify a variable that lives in a closure, use the keyword <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code>.</p>
+<p>Example:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">():</span>
+        <span class="k">nonlocal</span> <span class="n">counter</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">counter</span><span class="w"> </span><span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">increment</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">outer</span><span class="p">()</span>
+<span class="n">f</span><span class="p">()</span>  <span class="c1"># counter = 1</span>
+<span class="n">f</span><span class="p">()</span>  <span class="c1"># counter = 2</span>
+<span class="n">f</span><span class="p">()</span>  <span class="c1"># counter = 3</span>
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -452,7 +489,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../general-decorators/exercises.html"
+       href="../decorating-classes/exercises.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">

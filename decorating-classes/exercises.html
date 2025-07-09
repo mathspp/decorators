@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>⚙️ Section 4 – Customising Decorators with Arguments &#8212; Decorators masterclass</title>
+    <title>Exercises &#8212; Decorators masterclass</title>
   
   
   
@@ -57,9 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_ideas/_04';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'decorating-classes/exercises';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Non-local variables" href="../appendix/non-local-variables.html" />
+    <link rel="prev" title="Decorating classes" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +123,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -224,13 +224,13 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Decorators &amp; classes</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../classes-as-decorators/index.html">Classes as decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/exercises.html">Exercises</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../decorating-classes/index.html">Decorating classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/exercises.html">Exercises</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Decorating classes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercises</a></li>
 </ul>
 </details></li>
 </ul>
@@ -308,7 +308,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_ideas/_04.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdecorating-classes/exercises.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -338,7 +338,7 @@
       
       
       
-      <li><a href="../_sources/_ideas/_04.md" target="_blank"
+      <li><a href="../_sources/decorating-classes/exercises.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -409,9 +409,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -422,25 +420,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>⚙️ Section 4 – Customising Decorators with Arguments</h1>
+    <h1>Exercises</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-1-motivation-customising-a-caches-size">🎥 Lesson 1. Motivation: Customising a Cache’s Size</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-2-the-problem-with-cache-1000">🎥 Lesson 2. The Problem with <code class="docutils literal notranslate"><span class="pre">@cache(1000)</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-3-the-solution-a-decorator-factory">🎥 Lesson 3. The Solution: A Decorator Factory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-4-optional-arguments-and-smart-decorators">🎥 Lesson 4. Optional Arguments and Smart Decorators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-5-exercise-break-custom-cache-with-max-size">📘 Lesson 5. Exercise Break: Custom Cache with Max Size</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-6-solve-together-implement-a-decorator-with-arguments">🎥 Lesson 6. Solve Together: Implement a Decorator with Arguments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-summary">✅ Section Summary</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -450,181 +434,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="section-4-customising-decorators-with-arguments">
-<h1>⚙️ Section 4 – Customising Decorators with Arguments<a class="headerlink" href="#section-4-customising-decorators-with-arguments" title="Link to this heading">#</a></h1>
-<p><strong>Target duration</strong>: 60–75 minutes
-<strong>Purpose</strong>: Teach learners how to write decorators that accept parameters, and explain the subtle syntax and logic involved in building decorator factories.
-<strong>Assumed knowledge</strong>: Decorator blueprint with <code class="docutils literal notranslate"><span class="pre">*args</span></code>, <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>, and <code class="docutils literal notranslate"><span class="pre">&#64;wraps</span></code>.</p>
-<hr class="docutils" />
-<section id="lesson-1-motivation-customising-a-caches-size">
-<h2>🎥 Lesson 1. Motivation: Customising a Cache’s Size<a class="headerlink" href="#lesson-1-motivation-customising-a-caches-size" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Introduce a real-world reason for wanting a parameterized decorator.</p>
-<p><strong>Concepts</strong>:</p>
-<ul class="simple">
-<li><p>Decorator configuration</p></li>
-<li><p>Cache size limits</p></li>
-</ul>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic simple">
-<li><p>Recall the <code class="docutils literal notranslate"><span class="pre">&#64;cache</span></code> decorator from earlier.</p></li>
-<li><p>Pose the scenario: “What if we want to control the max number of cached values?”</p></li>
-<li><p>Implement a fixed-size cache using <code class="docutils literal notranslate"><span class="pre">dict.popitem()</span></code> when over the limit.</p></li>
-<li><p>Point out the hardcoded size (e.g., <code class="docutils literal notranslate"><span class="pre">1000</span></code>) and its limitations.</p></li>
-</ol>
-<p><strong>Transition</strong>: “Wouldn’t it be better if we could write <code class="docutils literal notranslate"><span class="pre">&#64;cache(1000)</span></code> instead?”</p>
-<hr class="docutils" />
-</section>
-<section id="lesson-2-the-problem-with-cache-1000">
-<h2>🎥 Lesson 2. The Problem with <code class="docutils literal notranslate"><span class="pre">&#64;cache(1000)</span></code><a class="headerlink" href="#lesson-2-the-problem-with-cache-1000" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Help learners understand why a decorator with arguments can’t be written like a regular decorator.</p>
-<p><strong>Concepts</strong>:</p>
-<ul class="simple">
-<li><p>Syntax expectations for <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> in Python</p></li>
-<li><p>Function call vs decorator application</p></li>
-</ul>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic">
-<li><p>Show attempts that don’t work:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@cache</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
-</pre></div>
-</div>
-<p>when <code class="docutils literal notranslate"><span class="pre">cache</span></code> expects two arguments.</p>
-</li>
-<li><p>Explain: Python expects the result of <code class="docutils literal notranslate"><span class="pre">&#64;something(...)</span></code> to be a <em>decorator</em>, not a function.</p></li>
-<li><p>Introduce the concept of <strong>two layers</strong>:</p>
-<ul class="simple">
-<li><p>Outer function: accepts arguments (e.g., <code class="docutils literal notranslate"><span class="pre">1000</span></code>)</p></li>
-<li><p>Inner function: is the actual decorator</p></li>
-</ul>
-</li>
-</ol>
-<p><strong>Analogy</strong>: “We’re writing a factory that returns a decorator — a decorator factory.”</p>
-<hr class="docutils" />
-</section>
-<section id="lesson-3-the-solution-a-decorator-factory">
-<h2>🎥 Lesson 3. The Solution: A Decorator Factory<a class="headerlink" href="#lesson-3-the-solution-a-decorator-factory" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Implement a working decorator with arguments using nested functions.</p>
-<p><strong>Concepts</strong>:</p>
-<ul class="simple">
-<li><p>Closures again (to capture the decorator arguments)</p></li>
-<li><p>Returning functions from functions</p></li>
-</ul>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic">
-<li><p>Implement:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cache</span><span class="p">(</span><span class="n">maxsize</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">decorator</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="o">...</span>
-        <span class="k">return</span> <span class="n">wrapper</span>
-    <span class="k">return</span> <span class="n">decorator</span>
-</pre></div>
-</div>
-</li>
-<li><p>Explain what happens at each level:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cache(1000)</span></code> returns <code class="docutils literal notranslate"><span class="pre">decorator</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;decorator</span></code> applies to the function</p></li>
-</ul>
-</li>
-<li><p>Show that this now works:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@cache</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
-</pre></div>
-</div>
-</li>
-</ol>
-<p><strong>Tip</strong>: Use <code class="docutils literal notranslate"><span class="pre">&#64;wraps(f)</span></code> in the inner wrapper as before.</p>
-<hr class="docutils" />
-</section>
-<section id="lesson-4-optional-arguments-and-smart-decorators">
-<h2>🎥 Lesson 4. Optional Arguments and Smart Decorators<a class="headerlink" href="#lesson-4-optional-arguments-and-smart-decorators" title="Link to this heading">#</a></h2>
-<p><em>(based on “To parens or not to parens?”)</em></p>
-<p><strong>Goal</strong>: Show how to make decorators that optionally accept arguments, like <code class="docutils literal notranslate"><span class="pre">&#64;lru_cache</span></code>.</p>
-<p><strong>Concepts</strong>:</p>
-<ul class="simple">
-<li><p>Type inspection</p></li>
-<li><p>Conditional logic to handle both use cases</p></li>
-</ul>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic">
-<li><p>Show how <code class="docutils literal notranslate"><span class="pre">functools.lru_cache</span></code> supports:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@lru_cache</span>
-<span class="nd">@lru_cache</span><span class="p">()</span>
-<span class="nd">@lru_cache</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-<li><p>Walk through an implementation:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1024</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">maxsize</span><span class="p">):</span>
-        <span class="c1"># used as @cache</span>
-        <span class="k">return</span> <span class="n">_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># used as @cache(...)</span>
-        <span class="k">return</span> <span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="n">_cache</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">maxsize</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-<li><p>Explain why this works — distinguish between a function being passed in vs a config value.</p></li>
-</ol>
-<p><strong>Warning</strong>: “This is more advanced — use it when flexibility is needed.”</p>
-<hr class="docutils" />
-</section>
-<section id="lesson-5-exercise-break-custom-cache-with-max-size">
-<h2>📘 Lesson 5. Exercise Break: Custom Cache with Max Size<a class="headerlink" href="#lesson-5-exercise-break-custom-cache-with-max-size" title="Link to this heading">#</a></h2>
-<p><strong>Instructions</strong>:</p>
-<ul class="simple">
-<li><p>Re-implement <code class="docutils literal notranslate"><span class="pre">&#64;cache(maxsize)</span></code> using nested functions.</p></li>
-<li><p>Cache should pop the oldest item when size limit is reached.</p></li>
-<li><p>Use a <code class="docutils literal notranslate"><span class="pre">list</span></code> or <code class="docutils literal notranslate"><span class="pre">collections.OrderedDict</span></code> to track item order if desired.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">&#64;wraps</span></code> as needed.</p></li>
-<li><p>Test on:</p>
-<ul>
-<li><p>Fibonacci</p></li>
-<li><p>Sin/cos</p></li>
-<li><p>Any user-defined function</p></li>
-</ul>
-</li>
-</ul>
-<p><strong>Bonus</strong>: Try allowing both <code class="docutils literal notranslate"><span class="pre">&#64;cache</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;cache(size)</span></code> syntax.</p>
-<hr class="docutils" />
-</section>
-<section id="lesson-6-solve-together-implement-a-decorator-with-arguments">
-<h2>🎥 Lesson 6. Solve Together: Implement a Decorator with Arguments<a class="headerlink" href="#lesson-6-solve-together-implement-a-decorator-with-arguments" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Reinforce decorator factories by doing one together from scratch.</p>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic">
-<li><p>Prompt: “Let’s build a decorator that repeats a function multiple times.”</p></li>
-<li><p>Implement:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">decorator</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-                <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">wrapper</span>
-    <span class="k">return</span> <span class="n">decorator</span>
-</pre></div>
-</div>
-</li>
-<li><p>Apply it to <code class="docutils literal notranslate"><span class="pre">say_hello()</span></code> and test.</p></li>
-</ol>
-<p><strong>Optional</strong>: Modify it to return the last result.</p>
-<p><strong>Wrap-up</strong>: “This pattern unlocks even more power from decorators.”</p>
-<hr class="docutils" />
-</section>
-<section id="section-summary">
-<h2>✅ Section Summary<a class="headerlink" href="#section-summary" title="Link to this heading">#</a></h2>
-<p>By the end of this section, the learner:</p>
-<ul class="simple">
-<li><p>Understands how to write decorators that accept arguments</p></li>
-<li><p>Can build and apply decorator factories</p></li>
-<li><p>Knows the difference between decorators and decorator factories</p></li>
-<li><p>Has seen flexible patterns like optional parentheses</p></li>
-</ul>
-<hr class="docutils" />
-<p>Ready to continue to Section 5 (Class-based decorators), or would you like to make any adjustments here first?</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -640,7 +451,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./_ideas"
+            path: "./decorating-classes"
         },
         predefinedOutput: true
     }
@@ -657,33 +468,30 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Decorating classes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../appendix/non-local-variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Non-local variables</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-1-motivation-customising-a-caches-size">🎥 Lesson 1. Motivation: Customising a Cache’s Size</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-2-the-problem-with-cache-1000">🎥 Lesson 2. The Problem with <code class="docutils literal notranslate"><span class="pre">@cache(1000)</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-3-the-solution-a-decorator-factory">🎥 Lesson 3. The Solution: A Decorator Factory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-4-optional-arguments-and-smart-decorators">🎥 Lesson 4. Optional Arguments and Smart Decorators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-5-exercise-break-custom-cache-with-max-size">📘 Lesson 5. Exercise Break: Custom Cache with Max Size</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-6-solve-together-implement-a-decorator-with-arguments">🎥 Lesson 6. Solve Together: Implement a Decorator with Arguments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-summary">✅ Section Summary</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

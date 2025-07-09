@@ -29,3 +29,12 @@ parts:
         sections:
         - file: general-decorators/caching-combinations.md
         - file: general-decorators/fixed-number-of-arguments.md
+        - file: general-decorators/accepting-a-variable-number-of-arguments.md
+        - file: general-decorators/cache-for-general-functions.md
+        - file: general-decorators/caching-is-really-useful-right.md
+        - file: general-decorators/accepting-a-variable-number-of-keyword-arguments.md
+        - file: general-decorators/general-signatures.md
+        - file: general-decorators/losing-metadata.md
+        - file: general-decorators/fixing-lost-metadata.md
+        - file: general-decorators/decorator-blueprint.md
+        - file: general-decorators/exercises.md

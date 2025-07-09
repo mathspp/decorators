@@ -38,3 +38,18 @@ parts:
         - file: general-decorators/fixing-lost-metadata.md
         - file: general-decorators/decorator-blueprint.md
         - file: general-decorators/exercises.md
+        - file: general-decorators/summary.md
+      - file: decorators-with-arguments/index.md
+        sections:
+        - file: decorators-with-arguments/exercises.md
+  - caption: Decorators & classes
+    chapters:
+      - file: classes-as-decorators/index.md
+        sections:
+        - file: classes-as-decorators/exercises.md
+      - file: decorating-classes/index.md
+        sections:
+        - file: decorating-classes/exercises.md
+  - caption: Appendix
+    chapters:
+      - file: appendix/non-local-variables.md

@@ -409,7 +409,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -425,6 +427,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-cache"><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#profiler"><code class="docutils literal notranslate"><span class="pre">profiler</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#history"><code class="docutils literal notranslate"><span class="pre">history</span></code></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -436,6 +448,42 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
+<p>For these exercises, write classes to be used as decorators and make sure to provide all the functionality required.</p>
+<section id="bounded-cache">
+<h2><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code><a class="headerlink" href="#bounded-cache" title="Link to this heading">#</a></h2>
+<p>Write a class decorator <code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code> that provides a cache for the function that is decorated.
+Assume the function decorated only accepts positional arguments that are hashable.
+The class decorator must provide the following functionality:</p>
+<ul class="simple">
+<li><p>the attribute <code class="docutils literal notranslate"><span class="pre">cache</span></code> should let the user inspect the cache;</p></li>
+<li><p>the attribute <code class="docutils literal notranslate"><span class="pre">hits</span></code> should count how many times the cache was hit (that is, values from the cache were used);</p></li>
+<li><p>the attribute <code class="docutils literal notranslate"><span class="pre">misses</span></code> should count how many times the cache did not contain the value that was required; and</p></li>
+<li><p>the method <code class="docutils literal notranslate"><span class="pre">clear_cache</span></code> should clear the cache and reset the attributes <code class="docutils literal notranslate"><span class="pre">hits</span></code>/<code class="docutils literal notranslate"><span class="pre">misses</span></code>.</p></li>
+</ul>
+</section>
+<section id="profiler">
+<h2><code class="docutils literal notranslate"><span class="pre">profiler</span></code><a class="headerlink" href="#profiler" title="Link to this heading">#</a></h2>
+<p>Write a class decorator <code class="docutils literal notranslate"><span class="pre">profiler</span></code> that keeps track of the time spent inside the decorated function.
+The class decorator must provide the following functionality:</p>
+<ul class="simple">
+<li><p>the attribute <code class="docutils literal notranslate"><span class="pre">calls</span></code> should count how many times the function was called;</p></li>
+<li><p>the attribute <code class="docutils literal notranslate"><span class="pre">total_time</span></code> should keep track of how much time, in total, was spent inside the function;</p></li>
+<li><p>the property <code class="docutils literal notranslate"><span class="pre">avg_time</span></code> should return the average time spent on the function per call; and</p></li>
+<li><p>the method <code class="docutils literal notranslate"><span class="pre">reset</span></code> should reset everything.</p></li>
+</ul>
+</section>
+<section id="history">
+<h2><code class="docutils literal notranslate"><span class="pre">history</span></code><a class="headerlink" href="#history" title="Link to this heading">#</a></h2>
+<p>Write a class decorator <code class="docutils literal notranslate"><span class="pre">history(maxsize)</span></code> that keeps track of the history of values returned by a given function.
+The class decorator must provide the following functionality:</p>
+<ul class="simple">
+<li><p>the argument <code class="docutils literal notranslate"><span class="pre">maxsize</span></code> determines the maximum history size, which should never be exceeded;</p></li>
+<li><p>the attribute <code class="docutils literal notranslate"><span class="pre">history</span></code> should let the user inspect the history as an iterable (doesn’t have to be a list);</p></li>
+<li><p>the property <code class="docutils literal notranslate"><span class="pre">most_recent</span></code> should return the most recent return value from that function;</p></li>
+<li><p>the property <code class="docutils literal notranslate"><span class="pre">oldest</span></code> should return the oldest item in the history; and</p></li>
+<li><p>the method <code class="docutils literal notranslate"><span class="pre">clear_history</span></code> should clear the function history.</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -492,6 +540,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-cache"><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#profiler"><code class="docutils literal notranslate"><span class="pre">profiler</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#history"><code class="docutils literal notranslate"><span class="pre">history</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

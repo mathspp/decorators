@@ -14,6 +14,8 @@ def f():
 print(type(f))  # <class 'functools._lru_cache_wrapper'>
 ```
 
+As shown above, the decorator `lru_cache` is a function but, once used as a decorator, it replaces the decorated functions with instances of this class called `_lru_cache_wrapper`.
+
 The decorator `lru_cache` accepts arguments, and in a class-based decorator, the most reasonable way of accepting arguments is as arguments to `__init__`; after all, that's the way you're supposed to customise classes...
 
 So, tentatively, you could add a parameter `maxsize` to your class-based decorator `cache`:

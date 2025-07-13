@@ -42,3 +42,5 @@ add(1, 2); add(1, 2); add(1, 2)
 
 print(add.hits, add.misses)  # 3 1
 ```
+
+How would you implement this functionality if you were restricted to using function-based decorators?

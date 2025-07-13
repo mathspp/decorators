@@ -432,11 +432,18 @@ code.language-apl {
 }
 
 a,
-a:visited {
+a:visited,
+.prev-next-area a p.prev-next-title {
     color: var(--accent);
 }
 
-a:hover {
+a:hover,
+a:visited:hover,
+.prev-next-area a p.prev-next-title:hover,
+.prev-next-area a p.prev-next-title:visited:hover,
+.prev-next-area a:hover p.prev-next-title,
+.prev-next-area a:visited:hover p.prev-next-title {
+
     color: var(--accent-2);
 }
 

@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0d74fa08" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=44dec17f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -472,6 +472,7 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;functools._lru_cache_wrapper&#39;&gt;</span>
 </pre></div>
 </div>
+<p>As shown above, the decorator <code class="docutils literal notranslate"><span class="pre">lru_cache</span></code> is a function but, once used as a decorator, it replaces the decorated functions with instances of this class called <code class="docutils literal notranslate"><span class="pre">_lru_cache_wrapper</span></code>.</p>
 <p>The decorator <code class="docutils literal notranslate"><span class="pre">lru_cache</span></code> accepts arguments, and in a class-based decorator, the most reasonable way of accepting arguments is as arguments to <code class="docutils literal notranslate"><span class="pre">__init__</span></code>; after all, that’s the way you’re supposed to customise classes…</p>
 <p>So, tentatively, you could add a parameter <code class="docutils literal notranslate"><span class="pre">maxsize</span></code> to your class-based decorator <code class="docutils literal notranslate"><span class="pre">cache</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">cache</span><span class="p">:</span>

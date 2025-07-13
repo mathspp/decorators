@@ -36,7 +36,7 @@ def cached_factory(f):
     cache = {}
     def cached_f(*args):
         if args not in cache:
-            cache[args] = f(*args)  # ?!
+            cache[args] = f(*args)  # !!
         return cache[args]
 
     return cached_f

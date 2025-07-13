@@ -1,10 +1,12 @@
 # Exercises
 
 For these exercises, write classes to be used as decorators and make sure to provide all the functionality required.
+(Some exercises mention [class properties](https://mathspp.com/blog/pydonts/properties).
+If you don't know what they are, skip those bullet points and implement only the others.)
 
-## `bounded_cache`
+## `cache`
 
-Write a class decorator `bounded_cache` that provides a cache for the function that is decorated.
+Write a class decorator `cache` that provides a cache for the function that is decorated.
 Assume the function decorated only accepts positional arguments that are hashable.
 The class decorator must provide the following functionality:
 

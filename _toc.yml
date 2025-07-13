@@ -41,11 +41,26 @@ parts:
         - file: general-decorators/summary.md
       - file: decorators-with-arguments/index.md
         sections:
+        - file: decorators-with-arguments/web-server-crash.md
+        - file: decorators-with-arguments/global-cache-size.md
+        - file: decorators-with-arguments/decorator-with-two-arguments.md
+        - file: decorators-with-arguments/decorator-factory.md
+        - file: decorators-with-arguments/inline-factory-usage.md
+        - file: decorators-with-arguments/decorators-with-arguments.md
         - file: decorators-with-arguments/exercises.md
+        - file: decorators-with-arguments/summary.md
+      - file: flexible-decorators/index.md
+        sections:
+        - file: flexible-decorators/a-flexible-decorator.md
+        - file: flexible-decorators/optional-arguments.md
+        - file: flexible-decorators/no-arguments.md
+        - file: flexible-decorators/exercises.md
+        - file: flexible-decorators/summary.md
   - caption: Decorators & classes
     chapters:
       - file: classes-as-decorators/index.md
         sections:
+        - file: classes-as-decorators/classes-are-callable.md
         - file: classes-as-decorators/exercises.md
       - file: decorating-classes/index.md
         sections:

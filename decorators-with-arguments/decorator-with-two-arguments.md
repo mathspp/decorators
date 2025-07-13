@@ -44,7 +44,7 @@ To use the at sign `@` syntax, you'd want to do something like this:
 
 ```python
 cache(1000)
-def fn(...):
+def fn(*args):
     ...
 ```
 

@@ -61,6 +61,13 @@ parts:
       - file: classes-as-decorators/index.md
         sections:
         - file: classes-as-decorators/classes-are-callable.md
+        - file: classes-as-decorators/why-use-a-class-as-a-decorator.md
+        - file: classes-as-decorators/the-class-arguments.md
+        - file: classes-as-decorators/making-the-instance-callable.md
+        - file: classes-as-decorators/class-vs-function.md
+        - file: classes-as-decorators/decorator-with-methods.md
+        - file: classes-as-decorators/decorator-with-attributes.md
+        - file: classes-as-decorators/customisable-class-based-decorator.md
         - file: classes-as-decorators/exercises.md
       - file: decorating-classes/index.md
         sections:

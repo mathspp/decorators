@@ -6,14 +6,14 @@ In that case, using the decorator looks like this:
 
 ```python
 @cache_factory
-def fn(...):
+def fn(*args):
     ...
 ```
 
 Again, because the at sign `@` is just syntactic sugar, the code above is the same as
 
 ```python
-def fn(...):
+def fn(*args):
     ...
 
 fn = cache_factory(fn)

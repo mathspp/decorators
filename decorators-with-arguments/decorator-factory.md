@@ -60,11 +60,11 @@ cache1000 = cache_factory(1000)
 cache2000 = cache_factory(2000)
 
 @cache1000
-def fn1(...):
+def fn1(*args):
     ...
 
 @cache2000
-def fn2(...):
+def fn2(*args):
     ...
 ```
 

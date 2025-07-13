@@ -22,11 +22,11 @@ You can also apply it directly with the at sign `@` syntax, without having to cr
 
 ```python
 @cache_factory(1000)
-def fn1(...):
+def fn1(*args):
     ...
 
 @cache_factory(2000)
-def fn2(...):
+def fn2(*args):
     ...
 ```
 
@@ -37,14 +37,14 @@ So,
 
 ```python
 @cache_factory(1000)
-def fn1(...):
+def fn1(*args):
     ...
 ```
 
 is the same as
 
 ```python
-def fn1(...):
+def fn1(*args):
     ...
 
 fn1 = cache_factory(1000)(fn1)

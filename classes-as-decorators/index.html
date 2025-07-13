@@ -243,6 +243,13 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Classes as decorators</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="classes-are-callable.html">Classes are callable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="why-use-a-class-as-a-decorator.html">Why use a class as a decorator?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the-class-arguments.html">The class arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="making-the-instance-callable.html">Making the instance callable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class-vs-function.html">Class vs example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="decorator-with-methods.html">Decorator with methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="decorator-with-attributes.html">Decorator with attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customisable-class-based-decorator.html">Customisable class-based decorators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
 </ul>
 </details></li>
@@ -426,7 +433,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -442,6 +451,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-requisites">Pre-requisites</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -453,6 +471,19 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="classes-as-decorators">
 <h1>Classes as decorators<a class="headerlink" href="#classes-as-decorators" title="Link to this heading">#</a></h1>
+<section id="objectives">
+<h2>Objectives<a class="headerlink" href="#objectives" title="Link to this heading">#</a></h2>
+<p>In this section you will learn how classes can be used as decorators and why you would want that.</p>
+</section>
+<section id="pre-requisites">
+<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Link to this heading">#</a></h2>
+<p>For this section, it’s assumed you are comfortable with:</p>
+<ul class="simple">
+<li><p>writing decorators that may or may not take arguments;</p></li>
+<li><p>writing classes with various attributes and methods; and</p></li>
+<li><p>customising class instances with the dunder method <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p></li>
+</ul>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -511,6 +542,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-requisites">Pre-requisites</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

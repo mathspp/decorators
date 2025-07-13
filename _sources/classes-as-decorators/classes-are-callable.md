@@ -24,3 +24,8 @@ print(type(int))  # <class 'type'>
 
 The output says that `int` is a type, which means that `int` is a class!
 It's a built-in class, but a class.
+All this to say that classes can also be called with parenthesis `()` after their name...
+
+And the decorator syntax with the at sign `@` doesn't _really_ require a function...
+Since the at sign syntax `@decorator` around a function `fn` translates into the call `decorator(fn)`, classes can also be used as decorators!
+But is that useful?

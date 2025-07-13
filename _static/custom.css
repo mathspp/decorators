@@ -1,0 +1,740 @@
+:root {
+    /* Flexoki colours https://stephango.com/flexoki */
+    --flexoki-white: #FFFCF0;
+    --flexoki-black: #100F0F;
+    --bg: var(--flexoki-white);
+    --bg-2: #F2F0E5;
+    --ui: #E6E4D9;
+    --ui-2: #DAD8CE;
+    --ui-3: #CECDC3;
+    --tx-3: #B7B5AC;
+    --tx-2: #6F6E69;
+    --tx: var(--flexoki-black);
+    --re-2: #D14D41;
+    --or-2: #DA702C;
+    --ye-2: #D0A215;
+    --gr-2: #879A39;
+    --cy-2: #3AA99F;
+    --bl-2: #4385BE;
+    --pu-2: #8B7EC8;
+    --ma-2: #CE5D97;
+    --re: #AF3029;
+    --or: #BC5215;
+    --ye: #AD8301;
+    --gr: #66800B;
+    --cy: #24837B;
+    --bl: #205EA6;
+    --pu: #5E409D;
+    --ma: #A02F6F;
+    --accent: var(--ma);
+    --accent-2: var(--pu);
+}
+
+[data-theme="dark"] {
+    /* Flexoki colours https://stephango.com/flexoki */
+    --bg: #100F0F;
+    --bg-2: #1C1B1A;
+    --ui: #282726;
+    --ui-2: #343331;
+    --ui-3: #403E3C;
+    --tx-3: #575653;
+    --tx-2: #878580;
+    --tx: #CECDC3;
+    --re-2: #AF3029;
+    --or-2: #BC5215;
+    --ye-2: #AD8301;
+    --gr-2: #66800B;
+    --cy-2: #24837B;
+    --bl-2: #24837B;
+    --pu-2: #5E409D;
+    --ma-2: #A02F6F;
+    --re: #D14D41;
+    --or: #DA702C;
+    --ye: #D0A215;
+    --gr: #879A39;
+    --cy: #3AA99F;
+    --bl: #4385BE;
+    --pu: #8B7EC8;
+    --ma: #CE5D97;
+    --accent: var(--ma);
+    --accent-2: var(--pu);
+}
+
+/* Add the Atkinson fonts.
+Got help from https://www.pagecloud.com/blog/how-to-add-custom-fonts-to-any-website,
+then generated the WebFont kit with Font Squirrel (https://www.fontsquirrel.com)
+(I also used https://transfonter.org/)
+and then read about the correct CSS here: https://stackoverflow.com/a/28571625
+*/
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bold-webfont.eot');
+    src: url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bold-webfont.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bold-webfont.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bold-webfont.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bold-webfont.svg#atkinson_hyperlegiblebold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bolditalic-webfont.eot');
+    src: url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bolditalic-webfont.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bolditalic-webfont.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bolditalic-webfont.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-bolditalic-webfont.svg#atkinson_hyperlegibleBdIt') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-italic-webfont.eot');
+    src: url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-italic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-italic-webfont.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-italic-webfont.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-italic-webfont.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-italic-webfont.svg#atkinson_hyperlegibleitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-regular-webfont.eot');
+    src: url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-regular-webfont.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-regular-webfont.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-regular-webfont.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/atkinsonhyperlegible-regular-webfont.svg#atkinson_hyperlegibleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Serif';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-BoldItalic.eot');
+    src: local('Roboto Serif Bold Italic'), local('RobotoSerif-BoldItalic'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-BoldItalic.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-BoldItalic.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-BoldItalic.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-BoldItalic.svg#RobotoSerif-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Serif';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Regular.eot');
+    src: local('Roboto Serif Regular'), local('RobotoSerif-Regular'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Regular.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Regular.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Regular.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Regular.svg#RobotoSerif-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Serif';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Bold.eot');
+    src: local('Roboto Serif Bold'), local('RobotoSerif-Bold'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Bold.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Bold.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Bold.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Bold.svg#RobotoSerif-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Serif';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Italic.eot');
+    src: local('Roboto Serif Italic'), local('RobotoSerif-Italic'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Italic.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Italic.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Italic.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Italic.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/RobotoSerif-Italic.svg#RobotoSerif-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'APL385 Unicode';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/APL385.eot');
+    src: local('APL385 Unicode'), local('APL385'),
+        url('https://mathspp.com/user/themes/myquark/fonts/APL385.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/APL385.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/APL385.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/APL385.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/APL385.svg#APL385') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FiraCode Nerd Font Mono';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Bold.eot');
+    src: local('Fira Code Bold Nerd Font Complete Mono'), local('FiraCode Nerd Font Mono'), local('FiraCodeNerdFontCompleteM-Bold'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Bold.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Bold.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Bold.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Bold.svg#FiraCodeNerdFontCompleteM-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FiraCode Nerd Font Mono';
+    src: url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Regular.eot');
+    src: local('Fira Code Regular Nerd Font Complete Mono'), local('FiraCode Nerd Font Mono'), local('FiraCodeNerdFontCompleteM-Regular'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Regular.woff2') format('woff2'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Regular.woff') format('woff'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Regular.ttf') format('truetype'),
+        url('https://mathspp.com/user/themes/myquark/fonts/FiraCodeNerdFontCompleteM-Regular.svg#FiraCodeNerdFontCompleteM-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@media screen and (min-width: 980px) {
+    .blog-3-col .bricklayer-column-sizer {
+        width: 33.3%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero h5,
+.hero h6 {
+    font-family: "Roboto Serif", serif;
+    color: var(--tx);
+}
+
+/* Headers in hero sections of modular pages marked with the `text-light` class. */
+.hero.text-light h1,
+.hero.text-light h2,
+.hero.text-light h3,
+.hero.text-light h4,
+.hero.text-light h5,
+.hero.text-light h6,
+.hero.text-light i,
+.hero.text-light p,
+.hero.text-light thead,
+.hero.text-light tr {
+    color: var(--flexoki-white);
+}
+
+/* The small titles of feature icons in modular pages. */
+.modular-features .feature-icon h6 {
+    color: var(--tx);
+    background: var(--bg);
+}
+
+#sidebar,
+/* Text on the sidebar of the blog. */
+#breadcrumbs,
+/* Text inside the breadcrumbs. */
+details,
+/* `details` for the little dropdown with the tags in the blog. */
+i,
+/* `i` for the FontAwesome icons. */
+time,
+/* For the times at which blog posts were written. */
+figcaption,
+/* For the image captions. */
+p,
+li,
+label {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: var(--tx);
+}
+
+/* Centre images in blog posts. */
+.blog-listing img,
+.blog-listing video {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+/* Justify the text of paragraphs inside the body,
+    exclude the ones in the footer section, in the hero sections,
+    the "feature" texts under icons in the workshops page,
+    elements specifically aligned to the centre,
+    and paragraphs inside divs where we specifically want centre alignment. */
+body p:not(#footer p, .hero p, .feature-content p, .text-center, div.text-center p) {
+    text-align: justify;
+}
+
+.float-right {
+    margin-left: 20px;
+}
+
+/* Colour of the navigation menu item's text. Use !important because so does the default theme.
+ * Include a very specific CSS selector: when this is not included, this very same specific
+ * selector in the theme CSS overrides this and makes the text too dark, so we override it again,
+ * because we are more stubborn than the theme :P */
+nav a,
+.header-dark #header:not(.scrolled) .dropmenu ul ul a {
+    color: var(--tx) !important;
+}
+
+.dropmenu ul li a.active,
+.dropmenu ul li a:focus,
+.dropmenu ul li a:hover,
+ul.treemenu li a.active,
+ul.treemenu li a:focus,
+ul.treemenu li a:hover,
+#header:not(.scrolled) .dropmenu ul li a:hover,
+#header:not(.scrolled) .dropmenu ul li a.active {
+    color: var(--accent-2) !important;
+}
+
+/* Colour of the menu item on mobile. */
+#toggle span {
+    background: var(--accent);
+}
+
+/* Overlay of the mobile menu. */
+.overlay {
+    background: var(--bg);
+}
+
+#header,
+body {
+    background: var(--bg);
+}
+
+blockquote {
+    border-left-color: var(--ui);
+    border-left-width: 5px;
+}
+
+#sidebar input {
+    background: var(--bg);
+    border-color: var(--bg-2);
+}
+
+#sidebar input:focus {
+    border-color: var(--accent);
+}
+
+/* Background colour for button classes like the "Random Article" button or the "Subscribe the newsletter". */
+.button,
+.btn {
+    color: var(--accent);
+    background: var(--bg);
+    border: .05rem solid var(--accent);
+}
+
+.btn:hover,
+.button:hover {
+    background: var(--bg-2);
+}
+
+.btn:focus,
+.button:focus {
+    color: var(--bg);
+    background: var(--tx);
+}
+
+.btn-center {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-btn,
+.cta-button {
+    font-size: 200%;
+    padding: 0.5rem 1.5rem !important;
+    height: auto;
+}
+
+/* Background colour for blog tags. */
+.label.label-secondary,
+.label.label-primary,
+.tags .label {
+    background: var(--ui);
+    color: var(--accent);
+}
+
+/* Colour for the numbers in the Blog archive and for the text in the selected tag in the blog. */
+.label.label-primary {
+    color: var(--tx);
+}
+
+/* Borders for the pagination numbers at the top of the blog listings. */
+.pagination li {
+    border-color: var(--ui);
+}
+
+/* Set the colours for pieces of code. */
+code {
+    font-family: "FiraCode Nerd Font Mono";
+    background: var(--ui);
+    color: var(--tx);
+    font-variant-ligatures: none;
+}
+
+pre code {
+    /* Repeat for multiline code. */
+    font-family: "FiraCode Nerd Font Mono";
+    background: var(--ui);
+    color: var(--tx);
+    font-variant-ligatures: none;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Style APL code with the correct font. */
+code.language-APL,
+code.language-apl,
+.apl code,
+.APL code {
+    /* Multiline APL code blocks and inline code with a "APL" span. */
+    font-family: "APL385 Unicode";
+}
+
+code.language-APL,
+code.language-apl {
+    line-height: 1.25;
+}
+
+a,
+a:visited {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent-2);
+}
+
+.btn:focus,
+.btn:hover,
+.button:focus,
+.button:hover {
+    border-color: var(--accent-2);
+}
+
+/* Background colour and shadow for the header menu. */
+.dropmenu.animated ul li ul {
+    background: var(--bg);
+    box-shadow: 0 1px 4px var(--bg-2);
+}
+
+#footer {
+    background: var(--bg-2) !important;
+    /* Use !important because the footer has the class bg-gray, that sets the colour with !important as well. */
+}
+
+/* Blog post cards with correct background and shadow. */
+.blog-listing .card {
+    background: var(--bg-2);
+    box-shadow: 0 10px 45px -9px var(--ui);
+}
+
+.notices.blue {
+    border-left-color: var(--bl);
+    background: var(--bg-2);
+}
+
+.notices.blue>* {
+    color: var(--bl);
+}
+
+.notices.green {
+    border-left-color: #327c32;
+    background: #1c221c;
+}
+
+.notices.green>* {
+    color: #5b9a5b;
+}
+
+.notices.yellow {
+    border-left-color: #854f03;
+    background: #221e1a;
+}
+
+.notices.yellow>* {
+    color: #ac6808;
+}
+
+.notices.red {
+    border-left-color: #d9534f;
+    background: #231e1e;
+}
+
+.notices.red>* {
+    color: #e27673;
+}
+
+/* https://stackoverflow.com/a/13184714/2828287 */
+/* Compensates for the height of the website header. */
+a.headeroffset {
+    display: block;
+    position: relative;
+    top: -64px;
+    visibility: hidden;
+}
+
+/* CSS to change the social icons in the footer. */
+.social-icon-container {
+    font-size: 28px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.social-icon {
+    color: var(--tx);
+}
+
+/* CSS for the image-captions plugin. */
+figure.image-caption {
+    text-align: center;
+    margin: 1rem;
+}
+
+figure.image-caption figcaption {
+    opacity: 0.7;
+    font-size: 90%;
+}
+
+figure.figure-right {
+    float: right;
+    margin-right: 0;
+}
+
+figure.figure-left {
+    float: left;
+    margin-left: 0;
+}
+
+figure.caption-left figcaption {
+    text-align: left;
+}
+
+figure.caption-right figcaption {
+    text-align: right;
+}
+
+/* End of the CSS for the image-captions plugin. */
+
+/* Mimic the CSS rule that keeps paragraphs "tight" in the modular pages (cf. /education),
+ * but use it for blockquotes as well.
+ */
+.modular-features .frame-box>blockquote {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add some CSS to make sure the Gumroad button doesn't look weird
+   because of interactions with the plugin that adds those icons to external links. */
+a.gumroad-button,
+a.external-link.no-image.gumroad-button {
+    background: var(--tx);
+    color: initial;
+}
+
+/* Customise tables. */
+table {
+    margin-bottom: 24px;
+    /* Separate from remainder of text. */
+    margin-left: auto;
+    /* Centre the table in the page. */
+    margin-right: auto;
+    border-collapse: collapse;
+    color: var(--tx);
+}
+
+thead {
+    color: var(--accent);
+    border-bottom: thin solid var(--tx);
+    /* Horizontal line under the header. */
+}
+
+table th,
+table td {
+    padding: 0 0.5em;
+    /* Prevent columns from getting crowded. */
+}
+
+tbody tr:nth-child(even) {
+    background: var(--bg-2);
+    /* Same colour as footer. */
+}
+
+/* Customise the icons to copy the code blocks to the clipboard. */
+.clipboard-icon {
+    color: var(--tx);
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+pre:hover>div>i.clipboard-icon {
+    opacity: 1;
+}
+
+.home-logo {
+    max-height: 30vh;
+}
+
+/* Add top scroll padding so that the header doesn't cover it. */
+:root {
+    scroll-padding-top: 4rem;
+}
+
+
+.modular-text {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.modular-features.offset-box .frame-box {
+    /* Offset box in modular pages. */
+    background: var(--bg-2);
+    box-shadow: 0 0 30px 0 var(--flexoki-black);
+}
+
+.modular-text h3 {
+    margin-top: 0;
+}
+
+.modular-text h2 {
+    margin-top: 0.5rem;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+kbd {
+    font-size: 70%;
+}
+
+
+table.stats-table {
+    font-size: 2rem;
+}
+
+table.stats-table thead {
+    border-bottom: 0;
+}
+
+a.glossary::after {
+    content: "\f02d";
+    /* Unicode for the Font Awesome book icon */
+    font-family: "Font Awesome 5 Free";
+    /* Ensure you're using the correct Font Awesome font */
+    font-weight: 900;
+    /* Font Awesome requires this for solid icons */
+    margin-left: 0.5em;
+    /* Space between text and icon */
+    font-size: 0.8em;
+    /* Adjust icon size if needed */
+    color: var(--bl);
+    /* Optional: set the icon color */
+    vertical-align: middle;
+    /* Align the icon with the text */
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: .7rem;
+    color: var(--fg);
+    transition: color 0.3s;
+}
+
+#theme-toggle:hover {
+    opacity: 0.8;
+}
+
+.dropmenu ul li a::before {
+    font-family: "Font Awesome 5 Free";
+}
+
+/* Override some theme/spectre CSS for the forms in the testimonials page & contact forms. */
+.form-input,
+.search-input,
+[data-grav-field=array] input,
+[data-grav-field=array] textarea,
+.form-select,
+.form-select:not([multiple]):not([size]) {
+    color: var(--tx);
+    background: var(--bg-2);
+
+    &::placeholder {
+        color: var(--tx-2);
+    }
+
+    &:focus,
+    &:active {
+        border: .05rem solid var(--accent);
+    }
+
+    &:not(:placeholder-shown):invalid {
+        border-color: var(--re);
+
+        &:focus {
+            background: var(--bg-2);
+        }
+    }
+}
+
+form span.required {
+    color: var(--re);
+}
+
+[data-theme="light"] .dark-theme-only {
+    display: none;
+}
+
+[data-theme="dark"] .light-theme-only {
+    display: none;
+}
+
+.bd-sidebar-primary {
+    background: var(--ui);
+}

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>General decorators &#8212; Decorators masterclass</title>
+    <title>Classes are callable &#8212; Decorators masterclass</title>
   
   
   
@@ -58,11 +58,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'general-decorators/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'classes-as-decorators/classes-are-callable';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Caching combinations" href="caching-combinations.html" />
-    <link rel="prev" title="Summary" href="../your-first-decorator/summary.html" />
+    <link rel="next" title="Exercises" href="exercises.html" />
+    <link rel="prev" title="Classes as decorators" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -195,7 +195,7 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Decorators</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../your-first-decorator/index.html">Your first decorator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../your-first-decorator/decorator-pattern.html">Decorator pattern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../your-first-decorator/decorator-syntax.html">Decorator syntax</a></li>
@@ -204,19 +204,19 @@
 <li class="toctree-l2"><a class="reference internal" href="../your-first-decorator/summary.html">Summary</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">General decorators</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="caching-combinations.html">Caching combinations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fixed-number-of-arguments.html">Fixed number of arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="accepting-a-variable-number-of-arguments.html">Accepting a variable number of arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cache-for-general-functions.html">Cache for general functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caching-is-really-useful-right.html">Caching is really useful, right?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="accepting-a-variable-number-of-keyword-arguments.html">Accepting a variable number of keyword arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="general-signatures.html">General signatures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="losing-metadata.html">Losing metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fixing-lost-metadata.html">Fixing lost metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="decorator-blueprint.html">Decorator blueprint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../general-decorators/index.html">General decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/caching-combinations.html">Caching combinations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/fixed-number-of-arguments.html">Fixed number of arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/accepting-a-variable-number-of-arguments.html">Accepting a variable number of arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/cache-for-general-functions.html">Cache for general functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/caching-is-really-useful-right.html">Caching is really useful, right?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/accepting-a-variable-number-of-keyword-arguments.html">Accepting a variable number of keyword arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/general-signatures.html">General signatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/losing-metadata.html">Losing metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/fixing-lost-metadata.html">Fixing lost metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/decorator-blueprint.html">Decorator blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -240,10 +240,10 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Decorators &amp; classes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../classes-as-decorators/index.html">Classes as decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/classes-are-callable.html">Classes are callable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/exercises.html">Exercises</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Classes as decorators</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Classes are callable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorating-classes/index.html">Decorating classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -325,7 +325,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgeneral-decorators/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fclasses-as-decorators/classes-are-callable.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +355,7 @@
       
       
       
-      <li><a href="../_sources/general-decorators/index.md" target="_blank"
+      <li><a href="../_sources/classes-as-decorators/classes-are-callable.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -426,9 +426,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -439,20 +437,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>General decorators</h1>
+    <h1>Classes are callable</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-requisites">Pre-requisites</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -462,18 +451,25 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="general-decorators">
-<h1>General decorators<a class="headerlink" href="#general-decorators" title="Link to this heading">#</a></h1>
-<section id="objectives">
-<h2>Objectives<a class="headerlink" href="#objectives" title="Link to this heading">#</a></h2>
-<p>In this section you will extend your knowledge about decorators by understanding what are some Python features and tools that you can use to make sure your decorators are generally applicable and useful.</p>
-</section>
-<section id="pre-requisites">
-<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Link to this heading">#</a></h2>
-<p>For this section, it’s assumed you’re comfortable with writing some simple decorators and applying them with the at sign <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax.</p>
-</section>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="classes-are-callable">
+<h1>Classes are callable<a class="headerlink" href="#classes-are-callable" title="Link to this heading">#</a></h1>
+<p>What is the output of running the code below?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">))</span>  <span class="c1"># ??</span>
+</pre></div>
 </div>
+<p>If you guessed “3”, then you are obviously correct.
+The built-in <code class="docutils literal notranslate"><span class="pre">int</span></code> turns strings into integers, when such a conversion is reasonable, and you can read about its behaviour in the documentation page called “Built-in functions”.
+However, the built-in <code class="docutils literal notranslate"><span class="pre">int</span></code> is not, strictly speaking, a function…</p>
+<p>The built-in <code class="docutils literal notranslate"><span class="pre">print</span></code> is a function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">print</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;builtin_function_or_method&#39;&gt;</span>
+</pre></div>
+</div>
+<p>However, the built-in <code class="docutils literal notranslate"><span class="pre">int</span></code> produces a different output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;type&#39;&gt;</span>
+</pre></div>
+</div>
+<p>The output says that <code class="docutils literal notranslate"><span class="pre">int</span></code> is a type, which means that <code class="docutils literal notranslate"><span class="pre">int</span></code> is a class!
+It’s a built-in class, but a class.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -489,7 +485,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./general-decorators"
+            path: "./classes-as-decorators"
         },
         predefinedOutput: true
     }
@@ -507,20 +503,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../your-first-decorator/summary.html"
+       href="index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Summary</p>
+        <p class="prev-next-title">Classes as decorators</p>
       </div>
     </a>
     <a class="right-next"
-       href="caching-combinations.html"
+       href="exercises.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Caching combinations</p>
+        <p class="prev-next-title">Exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -530,22 +526,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-requisites">Pre-requisites</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -219,7 +219,22 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/web-server-crash.html">Web server crash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/global-cache-size.html">Global cache size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-with-two-arguments.html">Decorator with two arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-factory.html">Decorator factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/inline-factory-usage.html">Inline factory usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorators-with-arguments.html">Decorators with arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/summary.html">Summary</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../flexible-decorators/index.html">Flexible decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/a-flexible-decorator.html">A flexible decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/optional-arguments.html">Optional arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/no-arguments.html">No arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -472,8 +487,8 @@ document.write(`
 <li><p>Point out the hardcoded size (e.g., <code class="docutils literal notranslate"><span class="pre">1000</span></code>) and its limitations.</p></li>
 </ol>
 <p><strong>Transition</strong>: “Wouldn’t it be better if we could write <code class="docutils literal notranslate"><span class="pre">&#64;cache(1000)</span></code> instead?”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-2-the-problem-with-cache-1000">
 <h2>🎥 Lesson 2. The Problem with <code class="docutils literal notranslate"><span class="pre">&#64;cache(1000)</span></code><a class="headerlink" href="#lesson-2-the-problem-with-cache-1000" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Help learners understand why a decorator with arguments can’t be written like a regular decorator.</p>
@@ -500,8 +515,8 @@ document.write(`
 </li>
 </ol>
 <p><strong>Analogy</strong>: “We’re writing a factory that returns a decorator — a decorator factory.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-3-the-solution-a-decorator-factory">
 <h2>🎥 Lesson 3. The Solution: A Decorator Factory<a class="headerlink" href="#lesson-3-the-solution-a-decorator-factory" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Implement a working decorator with arguments using nested functions.</p>
@@ -535,8 +550,8 @@ document.write(`
 </li>
 </ol>
 <p><strong>Tip</strong>: Use <code class="docutils literal notranslate"><span class="pre">&#64;wraps(f)</span></code> in the inner wrapper as before.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-4-optional-arguments-and-smart-decorators">
 <h2>🎥 Lesson 4. Optional Arguments and Smart Decorators<a class="headerlink" href="#lesson-4-optional-arguments-and-smart-decorators" title="Link to this heading">#</a></h2>
 <p><em>(based on “To parens or not to parens?”)</em></p>
@@ -569,8 +584,8 @@ document.write(`
 <li><p>Explain why this works — distinguish between a function being passed in vs a config value.</p></li>
 </ol>
 <p><strong>Warning</strong>: “This is more advanced — use it when flexibility is needed.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-5-exercise-break-custom-cache-with-max-size">
 <h2>📘 Lesson 5. Exercise Break: Custom Cache with Max Size<a class="headerlink" href="#lesson-5-exercise-break-custom-cache-with-max-size" title="Link to this heading">#</a></h2>
 <p><strong>Instructions</strong>:</p>
@@ -588,8 +603,8 @@ document.write(`
 </li>
 </ul>
 <p><strong>Bonus</strong>: Try allowing both <code class="docutils literal notranslate"><span class="pre">&#64;cache</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;cache(size)</span></code> syntax.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-6-solve-together-implement-a-decorator-with-arguments">
 <h2>🎥 Lesson 6. Solve Together: Implement a Decorator with Arguments<a class="headerlink" href="#lesson-6-solve-together-implement-a-decorator-with-arguments" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Reinforce decorator factories by doing one together from scratch.</p>
@@ -611,8 +626,8 @@ document.write(`
 </ol>
 <p><strong>Optional</strong>: Modify it to return the last result.</p>
 <p><strong>Wrap-up</strong>: “This pattern unlocks even more power from decorators.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="section-summary">
 <h2>✅ Section Summary<a class="headerlink" href="#section-summary" title="Link to this heading">#</a></h2>
 <p>By the end of this section, the learner:</p>

@@ -219,7 +219,22 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/web-server-crash.html">Web server crash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/global-cache-size.html">Global cache size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-with-two-arguments.html">Decorator with two arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-factory.html">Decorator factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/inline-factory-usage.html">Inline factory usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorators-with-arguments.html">Decorators with arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/summary.html">Summary</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../flexible-decorators/index.html">Flexible decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/a-flexible-decorator.html">A flexible decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/optional-arguments.html">Optional arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/no-arguments.html">No arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -477,8 +492,8 @@ document.write(`
 </li>
 </ol>
 <p><strong>Teaser</strong>: “Now we’ll write a class that behaves like a decorator function — but gives us more control.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-2-the-case-for-class-based-decorators">
 <h2>🎥 Lesson 2. The Case for Class-Based Decorators<a class="headerlink" href="#lesson-2-the-case-for-class-based-decorators" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Explain when and why to use classes instead of functions for decorators.</p>
@@ -496,8 +511,8 @@ document.write(`
 </ol>
 <p><strong>Analogy</strong>: “A function-based decorator is like a stateless tool. A class-based one can be a full-featured utility.”</p>
 <p><strong>Wrap-up</strong>: “Let’s write one!”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-3-implementing-a-class-based-cache-decorator">
 <h2>🎥 Lesson 3. Implementing a Class-Based Cache Decorator<a class="headerlink" href="#lesson-3-implementing-a-class-based-cache-decorator" title="Link to this heading">#</a></h2>
 <p><em>(based on “Classes as decorators”)</em></p>
@@ -516,8 +531,8 @@ document.write(`
 <li><p>Decorate a <code class="docutils literal notranslate"><span class="pre">fibonacci</span></code> function with <code class="docutils literal notranslate"><span class="pre">&#64;Cache</span></code> and show that it works.</p></li>
 </ol>
 <p><strong>Bonus</strong>: Print the internal cache to show state is preserved in the object.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-4-enhancing-decorated-functions-with-attributes">
 <h2>🎥 Lesson 4. Enhancing Decorated Functions with Attributes<a class="headerlink" href="#lesson-4-enhancing-decorated-functions-with-attributes" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Demonstrate the benefits of class-based decorators when attaching attributes or methods.</p>
@@ -539,8 +554,8 @@ document.write(`
 <li><p>Emphasize: this is intuitive in a class, messy in a function.</p></li>
 </ol>
 <p><strong>Caution</strong>: “Just remember — the result of <code class="docutils literal notranslate"><span class="pre">&#64;Cache</span></code> is not a function. It’s a callable object.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-5-decorator-arguments-classes-clean-separation">
 <h2>🎥 Lesson 5. Decorator Arguments + Classes = Clean Separation<a class="headerlink" href="#lesson-5-decorator-arguments-classes-clean-separation" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Combine parameterization with class-based decorators.</p>
@@ -566,8 +581,8 @@ document.write(`
 <li><p>Apply with <code class="docutils literal notranslate"><span class="pre">&#64;cache(1000)</span></code>.</p></li>
 </ol>
 <p><strong>Bonus</strong>: Briefly revisit the comparison to function-based factories — this way is often cleaner when state is involved.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-6-solve-together-timed-as-a-class-based-decorator">
 <h2>🎥 Lesson 6. Solve Together: <code class="docutils literal notranslate"><span class="pre">timed</span></code> as a Class-Based Decorator<a class="headerlink" href="#lesson-6-solve-together-timed-as-a-class-based-decorator" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Practice turning a known decorator into a class-based one.</p>
@@ -584,8 +599,8 @@ document.write(`
 </li>
 </ol>
 <p><strong>Reflection</strong>: “This might be overkill for <code class="docutils literal notranslate"><span class="pre">timed</span></code>, but now you know when and how to do it.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-7-exercise-break-self-guided">
 <h2>📘 Lesson 7. Exercise Break (self-guided)<a class="headerlink" href="#lesson-7-exercise-break-self-guided" title="Link to this heading">#</a></h2>
 <p><strong>Instructions</strong>:</p>
@@ -601,8 +616,8 @@ document.write(`
 <li><p>Compare behavior to function-based versions</p></li>
 </ul>
 <p><strong>Bonus</strong>: Support a threshold argument like <code class="docutils literal notranslate"><span class="pre">&#64;call_counter(10)</span></code> to trigger a warning or message.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="section-summary">
 <h2>✅ Section Summary<a class="headerlink" href="#section-summary" title="Link to this heading">#</a></h2>
 <p>By the end of this section, the learner:</p>

@@ -219,7 +219,22 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/web-server-crash.html">Web server crash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/global-cache-size.html">Global cache size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-with-two-arguments.html">Decorator with two arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-factory.html">Decorator factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/inline-factory-usage.html">Inline factory usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorators-with-arguments.html">Decorators with arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/summary.html">Summary</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../flexible-decorators/index.html">Flexible decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/a-flexible-decorator.html">A flexible decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/optional-arguments.html">Optional arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/no-arguments.html">No arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -482,8 +497,8 @@ document.write(`
 </li>
 </ul>
 <p><strong>Call to action</strong>: Encourage learners to follow along with the exercises and open the reference in a browser/tab.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-2-the-problem-a-function-that-did-too-much">
 <h2>🎥 Lesson 2. The Problem: A Function That Did Too Much<a class="headerlink" href="#lesson-2-the-problem-a-function-that-did-too-much" title="Link to this heading">#</a></h2>
 <p><em>(based on “A function that did too much”)</em></p>
@@ -504,8 +519,8 @@ document.write(`
 </ol>
 <p><strong>Example</strong>: Show the cached version of <code class="docutils literal notranslate"><span class="pre">factorial(n)</span></code> using a dictionary in the function body.</p>
 <p><strong>End note</strong>: “What if we want to reuse this caching logic elsewhere? Let’s start thinking in that direction.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-3-wrapping-functions-without-changing-them">
 <h2>🎥 Lesson 3. Wrapping Functions Without Changing Them<a class="headerlink" href="#lesson-3-wrapping-functions-without-changing-them" title="Link to this heading">#</a></h2>
 <p><em>(from “Factoring out the orthogonal behaviour”)</em></p>
@@ -525,8 +540,8 @@ document.write(`
 <li><p>Highlight how the logic is duplicated.</p></li>
 </ol>
 <p><strong>Key phrase</strong>: “We’re wrapping a function, not changing it. This pattern shows up a lot.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-4-duplicated-logic-time-to-generalise">
 <h2>🎥 Lesson 4. Duplicated Logic: Time to Generalise<a class="headerlink" href="#lesson-4-duplicated-logic-time-to-generalise" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Refactor repeated cache wrappers into a reusable factory.</p>
@@ -544,8 +559,8 @@ document.write(`
 </ol>
 <p><strong>Example</strong>: Time the calls to show the cache is working.</p>
 <p><strong>End note</strong>: “We’re on the right track — we now have a reusable function that adds behavior to other functions.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-5-closure-mechanics-explained">
 <h2>🎥 Lesson 5. Closure Mechanics Explained<a class="headerlink" href="#lesson-5-closure-mechanics-explained" title="Link to this heading">#</a></h2>
 <p><em>(This appears earlier than in the blog for clarity.)</em></p>
@@ -564,8 +579,8 @@ document.write(`
 <li><p>Tie it to real-world intuition: “this function remembers stuff.”</p></li>
 </ol>
 <p><strong>Call-out</strong>: “Understanding closures is key to building decorators later.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-6-first-exercise-break-self-guided">
 <h2>📘 Lesson 6. First Exercise Break (self-guided)<a class="headerlink" href="#lesson-6-first-exercise-break-self-guided" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Give learners a chance to solidify the basic function factory idea.</p>
@@ -576,8 +591,8 @@ document.write(`
 <li><p>Add timing manually to see the benefit.</p></li>
 </ul>
 <p><strong>Mention</strong>: “We’ll soon build a factory for timing too.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-7-solve-together-build-a-simple-cache-decorator">
 <h2>🎥 Lesson 7. Solve Together: Build a Simple Cache Decorator<a class="headerlink" href="#lesson-7-solve-together-build-a-simple-cache-decorator" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Reinforce learning by walking through a function factory again, and foreshadow decorators.</p>
@@ -590,8 +605,8 @@ document.write(`
 <li><p>Print timings or function output to show it’s working.</p></li>
 </ol>
 <p><strong>Wrap-up</strong>: “This pattern — function in, function out — is at the heart of decorators.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="section-summary">
 <h2>✅ Section Summary<a class="headerlink" href="#section-summary" title="Link to this heading">#</a></h2>
 <p>By the end of this section, the learner:</p>

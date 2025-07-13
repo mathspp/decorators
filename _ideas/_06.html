@@ -219,7 +219,22 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/web-server-crash.html">Web server crash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/global-cache-size.html">Global cache size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-with-two-arguments.html">Decorator with two arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-factory.html">Decorator factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/inline-factory-usage.html">Inline factory usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorators-with-arguments.html">Decorators with arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/summary.html">Summary</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../flexible-decorators/index.html">Flexible decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/a-flexible-decorator.html">A flexible decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/optional-arguments.html">Optional arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/no-arguments.html">No arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -481,8 +496,8 @@ document.write(`
 <li><p>Mention that standard library uses this: <code class="docutils literal notranslate"><span class="pre">&#64;dataclass</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;total_ordering</span></code>.</p></li>
 </ol>
 <p><strong>End note</strong>: “Let’s build a simple class decorator ourselves.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-2-when-to-use-class-decorators">
 <h2>🎥 Lesson 2. When to Use Class Decorators<a class="headerlink" href="#lesson-2-when-to-use-class-decorators" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Give learners practical reasons to decorate classes.</p>
@@ -504,8 +519,8 @@ document.write(`
 <li><p>Mention: class decorators are rarer than function decorators but very useful in libraries and frameworks.</p></li>
 <li><p>Set up motivation for next lesson: auto-generating a <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>.</p></li>
 </ol>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-3-solve-together-implement-an-add-repr-decorator">
 <h2>🎥 Lesson 3. Solve Together: Implement an <code class="docutils literal notranslate"><span class="pre">&#64;add_repr</span></code> Decorator<a class="headerlink" href="#lesson-3-solve-together-implement-an-add-repr-decorator" title="Link to this heading">#</a></h2>
 <p><em>(based on “Classes can be decorated”)</em></p>
@@ -536,8 +551,8 @@ document.write(`
 </ol>
 <p><strong>Bonus tip</strong>: Compare to <code class="docutils literal notranslate"><span class="pre">dataclasses.dataclass</span></code>.</p>
 <p><strong>Closing idea</strong>: “You’ve now seen decorators applied to functions, methods, and classes — anywhere there’s a name being defined, a decorator can hook in.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-4-exercise-break-self-guided">
 <h2>📘 Lesson 4. Exercise Break (self-guided)<a class="headerlink" href="#lesson-4-exercise-break-self-guided" title="Link to this heading">#</a></h2>
 <p><strong>Instructions</strong>:</p>
@@ -551,8 +566,8 @@ document.write(`
 <li><p>Optionally: make <code class="docutils literal notranslate"><span class="pre">&#64;add_repr</span></code> configurable to use <code class="docutils literal notranslate"><span class="pre">__str__</span></code> instead of <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p></li>
 </ul>
 <p><strong>Bonus</strong>: Research how <code class="docutils literal notranslate"><span class="pre">&#64;dataclass</span></code> is implemented under the hood.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="section-summary">
 <h2>✅ Section Summary<a class="headerlink" href="#section-summary" title="Link to this heading">#</a></h2>
 <p>By the end of this section, the learner:</p>

@@ -219,7 +219,22 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/web-server-crash.html">Web server crash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/global-cache-size.html">Global cache size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-with-two-arguments.html">Decorator with two arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-factory.html">Decorator factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/inline-factory-usage.html">Inline factory usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorators-with-arguments.html">Decorators with arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/summary.html">Summary</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../flexible-decorators/index.html">Flexible decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/a-flexible-decorator.html">A flexible decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/optional-arguments.html">Optional arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/no-arguments.html">No arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -482,8 +497,8 @@ document.write(`
 <li><p>Emphasize: This is just sugar — the core concept hasn’t changed.</p></li>
 </ol>
 <p><strong>Tip</strong>: Mention that the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax applies at <em>definition time</em>, not at runtime.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-2-applying-decorators-with-and-without">
 <h2>🎥 Lesson 2. Applying Decorators with and without <code class="docutils literal notranslate"><span class="pre">&#64;</span></code><a class="headerlink" href="#lesson-2-applying-decorators-with-and-without" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Give learners fluency in the two ways to apply decorators — and when to use each.</p>
@@ -505,8 +520,8 @@ document.write(`
 <li><p>Emphasize: both approaches are identical in effect.</p></li>
 </ol>
 <p><strong>Closing note</strong>: “From now on, we’ll mostly use the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax for clarity.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-3-decorator-mindset-enhancing-orthogonal-functionality">
 <h2>🎥 Lesson 3. Decorator Mindset: Enhancing Orthogonal Functionality<a class="headerlink" href="#lesson-3-decorator-mindset-enhancing-orthogonal-functionality" title="Link to this heading">#</a></h2>
 <p><strong>(Deviation: This concept is pulled out as its own lesson for clarity.)</strong></p>
@@ -525,8 +540,8 @@ document.write(`
 </ol>
 <p><strong>Optional</strong>: List a few decorators learners may have seen (<code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;app.route</span></code>, etc).</p>
 <p><strong>Wrap-up</strong>: “You now know the <em>why</em> behind decorators — the <em>how</em> comes next.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-4-exercise-break-reimplement-and-apply-cache-and-timed-decorators">
 <h2>📘 Lesson 4. Exercise Break: Reimplement and Apply Cache and Timed Decorators<a class="headerlink" href="#lesson-4-exercise-break-reimplement-and-apply-cache-and-timed-decorators" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Encourage recall and hands-on practice with both decorators.</p>
@@ -538,8 +553,8 @@ document.write(`
 <li><p>Try stacking them — does the order matter?</p></li>
 </ul>
 <p><strong>Bonus exercise</strong>: Implement a decorator that logs every call to a function.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-5-solve-together-decorate-fibonacci-and-benchmark-it">
 <h2>🎥 Lesson 5. Solve Together: Decorate Fibonacci and Benchmark It<a class="headerlink" href="#lesson-5-solve-together-decorate-fibonacci-and-benchmark-it" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Cement the idea of decorating functions in the wild.</p>
@@ -562,8 +577,8 @@ document.write(`
 </pre></div>
 </div>
 <p>becomes <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">a(b(f))</span></code>.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="section-summary">
 <h2>✅ Section Summary<a class="headerlink" href="#section-summary" title="Link to this heading">#</a></h2>
 <p>By the end of this section, the learner:</p>

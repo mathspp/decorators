@@ -219,7 +219,22 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorators-with-arguments/index.html">Decorators with arguments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/web-server-crash.html">Web server crash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/global-cache-size.html">Global cache size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-with-two-arguments.html">Decorator with two arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorator-factory.html">Decorator factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/inline-factory-usage.html">Inline factory usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/decorators-with-arguments.html">Decorators with arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorators-with-arguments/summary.html">Summary</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../flexible-decorators/index.html">Flexible decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/a-flexible-decorator.html">A flexible decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/optional-arguments.html">Optional arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/no-arguments.html">No arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -476,8 +491,8 @@ document.write(`
 <li><p>Introduce <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> as the answer — a way to pass through <em>any</em> arguments.</p></li>
 </ol>
 <p><strong>Optional</strong>: Demonstrate basic <code class="docutils literal notranslate"><span class="pre">print(args,</span> <span class="pre">kwargs)</span></code> output to build intuition.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-2-refactoring-the-cache-decorator">
 <h2>🎥 Lesson 2. Refactoring the Cache Decorator<a class="headerlink" href="#lesson-2-refactoring-the-cache-decorator" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Update the cache decorator to support any arguments using <code class="docutils literal notranslate"><span class="pre">*args</span></code>.</p>
@@ -495,8 +510,8 @@ document.write(`
 </ol>
 <p><strong>Note</strong>: No need for <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> yet — keep it simple.</p>
 <p><strong>Wrap-up</strong>: “This decorator now works on most functions. Soon, we’ll make it work on <em>all</em> functions.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-3-how-to-benchmark-any-function">
 <h2>🎥 Lesson 3. How to Benchmark Any Function<a class="headerlink" href="#lesson-3-how-to-benchmark-any-function" title="Link to this heading">#</a></h2>
 <p><em>(based on the updated <code class="docutils literal notranslate"><span class="pre">timed</span></code> decorator)</em></p>
@@ -514,8 +529,8 @@ document.write(`
 <li><p>Print both result and execution time.</p></li>
 </ol>
 <p><strong>Bonus</strong>: Mention that this is a common profiling trick.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-4-the-decorator-blueprint-anatomy">
 <h2>🎥 Lesson 4. The Decorator Blueprint (Anatomy)<a class="headerlink" href="#lesson-4-the-decorator-blueprint-anatomy" title="Link to this heading">#</a></h2>
 <p><em>(based on “Anatomy of a decorator”)</em></p>
@@ -543,8 +558,8 @@ document.write(`
 <li><p>Mention that decorators can break these rules if needed — this is a <em>starting point</em>, not a constraint.</p></li>
 </ol>
 <p><strong>Optional</strong>: Show a version where the return value is modified.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-5-common-pitfalls-metadata-loss">
 <h2>🎥 Lesson 5. Common Pitfalls: Metadata Loss<a class="headerlink" href="#lesson-5-common-pitfalls-metadata-loss" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Show how decorating a function can lose metadata like its name and docstring.</p>
@@ -561,8 +576,8 @@ document.write(`
 <li><p>Emphasize: this happens whenever you replace a function with a wrapper.</p></li>
 </ol>
 <p><strong>End note</strong>: “There’s a fix for this — and it’s also a decorator!”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-6-fixing-metadata-with-functools-wraps">
 <h2>🎥 Lesson 6. Fixing Metadata with <code class="docutils literal notranslate"><span class="pre">functools.wraps</span></code><a class="headerlink" href="#lesson-6-fixing-metadata-with-functools-wraps" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Introduce <code class="docutils literal notranslate"><span class="pre">wraps</span></code> and show how to use it properly.</p>
@@ -579,8 +594,8 @@ document.write(`
 <li><p>Mention that <code class="docutils literal notranslate"><span class="pre">wraps</span></code> also helps with debugging, stack traces, and tooling.</p></li>
 </ol>
 <p><strong>Warning</strong>: “Don’t forget this! You’ll want it in most decorators you write.”</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-7-solve-together-fix-a-broken-decorator-without-wraps">
 <h2>🎥 Lesson 7. Solve Together: Fix a Broken Decorator Without <code class="docutils literal notranslate"><span class="pre">wraps</span></code><a class="headerlink" href="#lesson-7-solve-together-fix-a-broken-decorator-without-wraps" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Reinforce the importance of <code class="docutils literal notranslate"><span class="pre">wraps</span></code> by fixing a broken example together.</p>
@@ -591,8 +606,8 @@ document.write(`
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">&#64;wraps</span></code> and confirm the fix.</p></li>
 <li><p>Optionally: time it before and after, and show how logs/stack traces improve.</p></li>
 </ol>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="lesson-8-exercise-break-self-guided">
 <h2>📘 Lesson 8. Exercise Break (self-guided)<a class="headerlink" href="#lesson-8-exercise-break-self-guided" title="Link to this heading">#</a></h2>
 <p><strong>Goal</strong>: Reinforce the full decorator blueprint, including variadic arguments and metadata preservation.</p>
@@ -610,8 +625,8 @@ document.write(`
 </li>
 </ul>
 <p><strong>Bonus</strong>: Stack <code class="docutils literal notranslate"><span class="pre">&#64;timed</span></code> + <code class="docutils literal notranslate"><span class="pre">&#64;logger</span></code> and describe the behavior.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="section-summary">
 <h2>✅ Section Summary<a class="headerlink" href="#section-summary" title="Link to this heading">#</a></h2>
 <p>By the end of this section, the learner:</p>

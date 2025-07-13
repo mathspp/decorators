@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'decorators-with-arguments/exercises';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Classes as decorators" href="../classes-as-decorators/index.html" />
-    <link rel="prev" title="Decorators with arguments" href="index.html" />
+    <link rel="next" title="Summary" href="summary.html" />
+    <link rel="prev" title="Decorators with arguments" href="decorators-with-arguments.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -219,7 +219,22 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Decorators with arguments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="web-server-crash.html">Web server crash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global-cache-size.html">Global cache size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="decorator-with-two-arguments.html">Decorator with two arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="decorator-factory.html">Decorator factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inline-factory-usage.html">Inline factory usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="decorators-with-arguments.html">Decorators with arguments</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../flexible-decorators/index.html">Flexible decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/a-flexible-decorator.html">A flexible decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/optional-arguments.html">Optional arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/no-arguments.html">No arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flexible-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -432,13 +447,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-cache"><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat"><code class="docutils literal notranslate"><span class="pre">repeat</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delay"><code class="docutils literal notranslate"><span class="pre">delay</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensure-type"><code class="docutils literal notranslate"><span class="pre">ensure_type</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-cache"><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transform"><code class="docutils literal notranslate"><span class="pre">transform</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suppress"><code class="docutils literal notranslate"><span class="pre">suppress</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#throttle2"><code class="docutils literal notranslate"><span class="pre">throttle2</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timeout"><code class="docutils literal notranslate"><span class="pre">timeout</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-cache-strategy"><code class="docutils literal notranslate"><span class="pre">bounded_cache_strategy</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -458,13 +475,6 @@ For all exercises, take these points in consideration:</p>
 <li><p>try to make the decorator as general as possible (using <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>); and</p></li>
 <li><p>once you’ve written your decorator, apply it to some other function(s) to convince yourself that it’s working.</p></li>
 </ul>
-<section id="bounded-cache">
-<h2><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code><a class="headerlink" href="#bounded-cache" title="Link to this heading">#</a></h2>
-<p>Write a decorator <code class="docutils literal notranslate"><span class="pre">bounded_cache(maxsize)</span></code> that caches function call results.
-The integer argument <code class="docutils literal notranslate"><span class="pre">maxsize</span></code> controls the maximum size of the cache, and your decorator should make sure that the cache never has more than the given number of cached results.
-You can assume that the decorator <code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code> will only be used on functions that only accept positional arguments (and no keyword arguments).
-You can also assume that the functions only accept hashable arguments (values you can use as dictionary keys), like numbers, booleans, tuples, and strings.</p>
-</section>
 <section id="repeat">
 <h2><code class="docutils literal notranslate"><span class="pre">repeat</span></code><a class="headerlink" href="#repeat" title="Link to this heading">#</a></h2>
 <p>Write a general decorator <code class="docutils literal notranslate"><span class="pre">repeat(n)</span></code> that calls the decorated function repeatedly.
@@ -481,6 +491,23 @@ The float argument <code class="docutils literal notranslate"><span class="pre">
 If it is not, raise a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>.
 The type argument <code class="docutils literal notranslate"><span class="pre">type_</span></code> specifies what is the acceptable output type.</p>
 </section>
+<section id="bounded-cache">
+<h2><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code><a class="headerlink" href="#bounded-cache" title="Link to this heading">#</a></h2>
+<p>Write a decorator <code class="docutils literal notranslate"><span class="pre">bounded_cache(maxsize)</span></code> that caches function call results.
+The integer argument <code class="docutils literal notranslate"><span class="pre">maxsize</span></code> controls the maximum size of the cache, and your decorator should make sure that the cache never has more than the given number of cached results.
+You can assume that the decorator <code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code> will only be used on functions that only accept positional arguments (and no keyword arguments).
+You can also assume that the functions only accept hashable arguments (values you can use as dictionary keys), like numbers, booleans, tuples, and strings.</p>
+<p>When the cache has hit the maximum size, you can:</p>
+<ol class="arabic simple">
+<li><p>remove a random key/value pair from the cache;</p></li>
+<li><p>remove the oldest key/value pair from the cache; or</p></li>
+<li><p>remove the key/value pair that hasn’t been used for the longest time.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Strategies 2. and 3. are <em>not</em> the same!</p>
+</div>
+</section>
 <section id="transform">
 <h2><code class="docutils literal notranslate"><span class="pre">transform</span></code><a class="headerlink" href="#transform" title="Link to this heading">#</a></h2>
 <p>Write a decorator <code class="docutils literal notranslate"><span class="pre">transform(fn)</span></code> that transforms function results.
@@ -495,8 +522,22 @@ For example, <code class="docutils literal notranslate"><span class="pre">&#64;s
 <section id="throttle2">
 <h2><code class="docutils literal notranslate"><span class="pre">throttle2</span></code><a class="headerlink" href="#throttle2" title="Link to this heading">#</a></h2>
 <p>Write a general decorator <code class="docutils literal notranslate"><span class="pre">throttle2(timeout)</span></code> that prevents you from calling a function too often in quick succession.
-The float argument <code class="docutils literal notranslate"><span class="pre">timeout</span></code> defines how much time to wait before allowing another call of the same function.
+The float argument <code class="docutils literal notranslate"><span class="pre">timeout</span></code> defines how much time (in seconds) to wait before allowing another call of the same function.
 For example, <code class="docutils literal notranslate"><span class="pre">throttle2(1)</span></code> should be the same as <a class="reference internal" href="../general-decorators/exercises.html#throttle"><span class="std std-ref">the decorator <code class="docutils literal notranslate"><span class="pre">throttle</span></code> from a previous exercise</span></a>.</p>
+</section>
+<section id="timeout">
+<h2><code class="docutils literal notranslate"><span class="pre">timeout</span></code><a class="headerlink" href="#timeout" title="Link to this heading">#</a></h2>
+<p>Write a general decorator <code class="docutils literal notranslate"><span class="pre">timeout(duration)</span></code> that runs the decorated function in a separate thread and cancels it if the function takes too long to run.
+The float argument <code class="docutils literal notranslate"><span class="pre">duration</span></code> defines how much time (in seconds) the function can run for before being cancelled.</p>
+<p>Tackle this exercise only if you’re familiar with threads.
+Assume the decorator <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is only applied to nice, thread-safe functions.</p>
+</section>
+<section id="bounded-cache-strategy">
+<h2><code class="docutils literal notranslate"><span class="pre">bounded_cache_strategy</span></code><a class="headerlink" href="#bounded-cache-strategy" title="Link to this heading">#</a></h2>
+<p>Tackle this exercise only if you’ve solved the <a class="reference internal" href="#bounded-cache"><span class="xref myst">previous exercise on the decorator <code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code></span></a>.</p>
+<p>Write a general decorator <code class="docutils literal notranslate"><span class="pre">bounded_cache_strategy(maxsize,</span> <span class="pre">strategy)</span></code> that caches function results.
+The integer <code class="docutils literal notranslate"><span class="pre">maxsize</span></code> controls the maximum size of the cache and the function <code class="docutils literal notranslate"><span class="pre">strategy(cache)</span></code> controls how to make room in the cache for a new key in case the cache is already full.</p>
+<p>The remainder of the problem statement is the same as for <a class="reference internal" href="#bounded-cache"><span class="xref myst">the previous exercise on the decorator <code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code></span></a>.</p>
 <p>To be able to solve this, you may need to <a class="reference internal" href="../appendix/non-local-variables.html"><span class="std std-doc">read up on non-local variables</span></a>, a closure-related feature.</p>
 </section>
 </section>
@@ -532,7 +573,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">thrott
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="decorators-with-arguments.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -541,11 +582,11 @@ For example, <code class="docutils literal notranslate"><span class="pre">thrott
       </div>
     </a>
     <a class="right-next"
-       href="../classes-as-decorators/index.html"
+       href="summary.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Classes as decorators</p>
+        <p class="prev-next-title">Summary</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -565,13 +606,15 @@ For example, <code class="docutils literal notranslate"><span class="pre">thrott
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-cache"><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat"><code class="docutils literal notranslate"><span class="pre">repeat</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delay"><code class="docutils literal notranslate"><span class="pre">delay</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensure-type"><code class="docutils literal notranslate"><span class="pre">ensure_type</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-cache"><code class="docutils literal notranslate"><span class="pre">bounded_cache</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transform"><code class="docutils literal notranslate"><span class="pre">transform</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suppress"><code class="docutils literal notranslate"><span class="pre">suppress</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#throttle2"><code class="docutils literal notranslate"><span class="pre">throttle2</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timeout"><code class="docutils literal notranslate"><span class="pre">timeout</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-cache-strategy"><code class="docutils literal notranslate"><span class="pre">bounded_cache_strategy</span></code></a></li>
 </ul>
   </nav></div>
 

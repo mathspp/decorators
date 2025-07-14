@@ -18,3 +18,11 @@ The exercises that follow are _not_ ordered by difficulty, as that is highly sub
 
 For this section, it's assumed you are comfortable with writing all sorts of decorators.
 It's also assumed you are comfortable with being uncomfortable and struggling, since that's what provides the best learning opportunities.
+
+## Solutions
+
+The decorators you'll be writing are, most of them, written in Python themselves.
+This means you can open the source code of Python and look at the way the decorators are implemented!
+
+If you get stuck, or if you get to a point where you're happy with the work you've already done and you'd like to see what edge cases you're missing, look up the decorator you're implementing in the source code for Python.
+You will learn _a **lot**_.

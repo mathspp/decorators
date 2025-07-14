@@ -83,7 +83,15 @@ parts:
     chapters:
       - file: decorator-projects/index.md
         sections:
+        - file: decorator-projects/enum-unique.md
+        - file: decorator-projects/functools-total_ordering.md
+        - file: decorator-projects/functools-wraps.md
         - file: decorator-projects/functools-lru_cache.md
+        - file: decorator-projects/contextlib-contextmanager.md
+        - file: decorator-projects/staticmethod.md
+        - file: decorator-projects/classmethod.md
+        - file: decorator-projects/property.md
+        - file: decorator-projects/dataclasses-dataclass.md
   - caption: Appendix
     chapters:
       - file: appendix/non-local-variables.md

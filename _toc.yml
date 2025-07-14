@@ -79,7 +79,12 @@ parts:
         - file: decorating-classes/returning-the-class.md
         - file: decorating-classes/exercises.md
         - file: decorating-classes/summary.md
-  - caption: Conclusion
+  - caption: The end?
+    chapters:
+      - file: the-end/what-now.md
+      - file: the-end/feedback.md
+      - file: the-end/connect-with-me.md
+  - caption: Appendix
     chapters:
       - file: decorator-projects/index.md
         sections:
@@ -92,6 +97,4 @@ parts:
         - file: decorator-projects/classmethod.md
         - file: decorator-projects/property.md
         - file: decorator-projects/dataclasses-dataclass.md
-  - caption: Appendix
-    chapters:
       - file: appendix/non-local-variables.md

@@ -61,15 +61,16 @@ Then, `timed_factory` should return another function that still accepts a number
 Once the function `timed_factory` is implemented properly, the code below should work:
 
 ```py
-# This requires the functions `cached_factorial`
-# and `cached_fibonacci` from before.
+# This requires the functions `factorial` and `fibonacci`.
 
 import time
 
 def timed_factory(f):
     ...  # Your code goes here...
 
+cached_factorial = cached_factory(factorial)
 timed_factorial = timed_factory(cached_factorial)
+cached_fibonacci = cached_factory(fibonacci)
 timed_fibonacci = timed_factory(cached_fibonacci)
 
 _, t1 = timed_factorial(999_999)

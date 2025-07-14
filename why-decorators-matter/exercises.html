@@ -551,15 +551,16 @@ Then, <code class="docutils literal notranslate"><span class="pre">timed_factory
 <li><p>the time the function took to execute.</p></li>
 </ol>
 <p>Once the function <code class="docutils literal notranslate"><span class="pre">timed_factory</span></code> is implemented properly, the code below should work:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># This requires the functions `cached_factorial`</span>
-<span class="c1"># and `cached_fibonacci` from before.</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># This requires the functions `factorial` and `fibonacci`.</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">timed_factory</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="o">...</span>  <span class="c1"># Your code goes here...</span>
 
+<span class="n">cached_factorial</span> <span class="o">=</span> <span class="n">cached_factory</span><span class="p">(</span><span class="n">factorial</span><span class="p">)</span>
 <span class="n">timed_factorial</span> <span class="o">=</span> <span class="n">timed_factory</span><span class="p">(</span><span class="n">cached_factorial</span><span class="p">)</span>
+<span class="n">cached_fibonacci</span> <span class="o">=</span> <span class="n">cached_factory</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">)</span>
 <span class="n">timed_fibonacci</span> <span class="o">=</span> <span class="n">timed_factory</span><span class="p">(</span><span class="n">cached_fibonacci</span><span class="p">)</span>
 
 <span class="n">_</span><span class="p">,</span> <span class="n">t1</span> <span class="o">=</span> <span class="n">timed_factorial</span><span class="p">(</span><span class="mi">999_999</span><span class="p">)</span>

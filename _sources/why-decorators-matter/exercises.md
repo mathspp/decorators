@@ -32,12 +32,12 @@ def cached_factory(f):
 
 
 cached_factorial = cached_factory(factorial)
-print(cached_factorial(999_999))  # First one should be “slow”.
-print(cached_factorial(999_999))  # Second one should be instantaneous.
+_ = cached_factorial(999_999)  # First one should be “slow”.
+_ = cached_factorial(999_999)  # Second one should be instantaneous.
 
 cached_fibonacci = cached_factory(fibonacci)
-print(cached_fibonacci(40))  # First one should be “slow”.
-print(cached_fibonacci(40))  # Second one should be instantaneous.
+_ = cached_fibonacci(40)  # First one should be “slow”.
+_ = cached_fibonacci(40)  # Second one should be instantaneous.
 ```
 
 ```{note}

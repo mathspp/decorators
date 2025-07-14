@@ -133,8 +133,4 @@ The article mixes “wraps” and decorator-with-arguments topics. Here, I’m g
 
 ---
 
-Create a section with exercises on replicating decorators from the std library, like
-
- - global_enum from `enum` or validation enums
-
 Talk about creating decorators for instance methods.

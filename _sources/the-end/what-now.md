@@ -15,3 +15,9 @@ If you could only remember _one_ thing from this whole course, let it be the mai
 
 The main idea behind decorators is to augment your functions and your classes with useful functionality that is orthogonal to the main objective of the object you are decorating.
 You write that functionality in a decorator because that makes it reusable across other objects that need that same functionality.
+
+## Decorator projects
+
+I tried to tell you all about decorators in “isolation” from the rest of the language.
+However, things can get really fun (and wild!) if you think about decorators interacting with generators, context managers, classes, descriptors, dunder methods, and all sorts of other fun stuff.
+That's why I also added some “[decorator projects](../decorator-projects/index.md)” for you to know in what directions you can take your learning experience.

@@ -1,6 +1,13 @@
 # Connect with me
 
-Hey, I'm Rodrigo Girão Serrão from sunny Portugal 🇵🇹.
+```{image} ../imgs/rodrigo_1024.webp
+:alt: Circular headshot of Rodrigo Girão Serrão. In the photo you can see Rodrigo's head and he's smiling.
+:class: mb-1
+:width: 200px
+:align: right
+```
+
+Hey 👋, I'm Rodrigo Girão Serrão from sunny Portugal 🇵🇹.
 
 I'm a prolific Python author and speaker, with [multiple books published independently](https://mathspp.com/books) and [dozens of talks and tutorials](https://mathspp.com/talks) given at the largest Python conferences in the world. I also [blog frequently about Python](https://mathspp.com/blog) and publish two Python newsletters: the [mathspp insider](https://mathspp.com/insider) and the daily [Python drops 🐍💧](https://mathspp.com/drops).
 

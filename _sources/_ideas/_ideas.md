@@ -135,12 +135,6 @@ The article mixes “wraps” and decorator-with-arguments topics. Here, I’m g
 
 Create a section with exercises on replicating decorators from the std library, like
 
- - functools.lru_cache and functools.cache
- - property
- - staticmethod and classmethod
- - contextmanager
- - dataclass
- - functools.total_ordering
- - functools.wraps
+ - global_enum from `enum` or validation enums
 
 Talk about creating decorators for instance methods.

@@ -27,7 +27,7 @@ The type argument `type_` specifies what is the acceptable output type.
 Write a decorator `bounded_cache(maxsize)` that caches function call results.
 The integer argument `maxsize` controls the maximum size of the cache, and your decorator should make sure that the cache never has more than the given number of cached results.
 You can assume that the decorator `bounded_cache` will only be used on functions that only accept positional arguments (and no keyword arguments).
-You can also assume that the functions only accept hashable arguments (values you can use as dictionary keys), like numbers, booleans, tuples, and strings.
+You can also assume that the functions only accept hashable arguments (values you can use as dictionary keys), like numbers, Booleans, tuples, and strings.
 
 When the cache has hit the maximum size, you can:
 

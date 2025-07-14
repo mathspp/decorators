@@ -16,7 +16,7 @@ It should wrap the original function and preserve its metadata, but other than t
 
 Write a decorator `cache` that caches function call results, just like the decorator `cached_factory` you have been improving.
 You can assume that the decorator `cache` will only be used on functions that only accept positional arguments (and no keyword arguments).
-You can also assume that the functions only accept hashable arguments (values you can use as dictionary keys), like numbers, booleans, tuples, and strings.
+You can also assume that the functions only accept hashable arguments (values you can use as dictionary keys), like numbers, Booleans, tuples, and strings.
 
 ## `timer`
 

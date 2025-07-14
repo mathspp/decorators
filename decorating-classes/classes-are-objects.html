@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>🧱 Section 2 – From Higher-Order Functions to Decorators &#8212; Decorators masterclass</title>
+    <title>Classes can be decorated &#8212; Decorators masterclass</title>
   
   
   
@@ -58,11 +58,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_ideas/_02';</script>
-    <link rel="canonical" href="https://decorators.mathspp.com/_ideas/_02.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'decorating-classes/classes-are-objects';</script>
+    <link rel="canonical" href="https://decorators.mathspp.com/decorating-classes/classes-are-objects.html" />
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Replacing classes" href="replacing-classes.html" />
+    <link rel="prev" title="Decorating classes" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +126,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -242,7 +242,7 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Decorators &amp; classes</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../classes-as-decorators/index.html">Classes as decorators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/classes-are-callable.html">Classes are callable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/why-use-a-class-as-a-decorator.html">Why use a class as a decorator?</a></li>
@@ -256,14 +256,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../decorating-classes/index.html">Decorating classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/classes-are-objects.html">Classes can be decorated</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/replacing-classes.html">Replacing classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/a-decorator-for-a-class.html">A decorator for a class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/patching-methods.html">Patching methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/returning-the-class.html">Returning the class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/exercises.html">Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/summary.html">Summary</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Decorating classes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Classes can be decorated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="replacing-classes.html">Replacing classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="a-decorator-for-a-class.html">A decorator for a class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="patching-methods.html">Patching methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="returning-the-class.html">Returning the class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -341,7 +341,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_ideas/_02.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdecorating-classes/classes-are-objects.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -371,7 +371,7 @@
       
       
       
-      <li><a href="../_sources/_ideas/_02.md" target="_blank"
+      <li><a href="../_sources/decorating-classes/classes-are-objects.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -442,9 +442,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -455,24 +453,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>🧱 Section 2 – From Higher-Order Functions to Decorators</h1>
+    <h1>Classes can be decorated</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-1-the-decorator-pattern-and-its-syntax">🎥 Lesson 1. The Decorator Pattern and Its Syntax</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-2-applying-decorators-with-and-without">🎥 Lesson 2. Applying Decorators with and without <code class="docutils literal notranslate"><span class="pre">@</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-3-decorator-mindset-enhancing-orthogonal-functionality">🎥 Lesson 3. Decorator Mindset: Enhancing Orthogonal Functionality</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-4-exercise-break-reimplement-and-apply-cache-and-timed-decorators">📘 Lesson 4. Exercise Break: Reimplement and Apply Cache and Timed Decorators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-5-solve-together-decorate-fibonacci-and-benchmark-it">🎥 Lesson 5. Solve Together: Decorate Fibonacci and Benchmark It</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-summary">✅ Section Summary</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -482,134 +467,33 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="section-2-from-higher-order-functions-to-decorators">
-<h1>🧱 Section 2 – From Higher-Order Functions to Decorators<a class="headerlink" href="#section-2-from-higher-order-functions-to-decorators" title="Link to this heading">#</a></h1>
-<p><strong>Target duration</strong>: 45–60 minutes
-<strong>Purpose</strong>: Bridge the gap between function factories and official Python decorator syntax. Make learners comfortable with the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> symbol, and give them hands-on practice converting function wrappers into decorators.
-<strong>Assumed knowledge</strong>: Everything from Section 1 — higher-order functions, closures, reusable wrappers.</p>
-<hr class="docutils" />
-<section id="lesson-1-the-decorator-pattern-and-its-syntax">
-<h2>🎥 Lesson 1. The Decorator Pattern and Its Syntax<a class="headerlink" href="#lesson-1-the-decorator-pattern-and-its-syntax" title="Link to this heading">#</a></h2>
-<p><em>(based on “The decorator pattern”)</em></p>
-<p><strong>Goal</strong>: Show how the pattern the learner has been using is formalized in Python as the <em>decorator pattern</em>, and introduce the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax.</p>
-<p><strong>Concepts</strong>:</p>
-<ul class="simple">
-<li><p>Definition of the “decorator pattern” in software design</p></li>
-<li><p>Python’s syntactic sugar for decorators</p></li>
-</ul>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic">
-<li><p>State: “What we’ve been doing is the <em>decorator pattern</em>.”</p></li>
-<li><p>Define a decorator as a function that takes a function and returns a function.</p></li>
-<li><p>Show how to use a decorator manually:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fibonacci</span> <span class="o">=</span> <span class="n">cache</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">)</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="classes-can-be-decorated">
+<h1>Classes can be decorated<a class="headerlink" href="#classes-can-be-decorated" title="Link to this heading">#</a></h1>
+<p>Classes can be decorated in the same way as functions.
+The underlying pattern for decorating is the assignment to the same name after going through a decorator:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="o">=</span> <span class="n">decorator</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-<li><p>Show equivalent <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@cache</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+<p>Classes are also objects, so they can be passed around in a similar fashion:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">Cls</span> <span class="o">=</span> <span class="n">decorator</span><span class="p">(</span><span class="n">Cls</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-<li><p>Emphasize: This is just sugar — the core concept hasn’t changed.</p></li>
-</ol>
-<p><strong>Tip</strong>: Mention that the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax applies at <em>definition time</em>, not at runtime.</p>
-</section>
-<hr class="docutils" />
-<section id="lesson-2-applying-decorators-with-and-without">
-<h2>🎥 Lesson 2. Applying Decorators with and without <code class="docutils literal notranslate"><span class="pre">&#64;</span></code><a class="headerlink" href="#lesson-2-applying-decorators-with-and-without" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Give learners fluency in the two ways to apply decorators — and when to use each.</p>
-<p><strong>Concepts</strong>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;decorator</span></code> vs <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">decorator(f)</span></code></p></li>
-<li><p>When you can/cannot use <code class="docutils literal notranslate"><span class="pre">&#64;</span></code></p></li>
-</ul>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic">
-<li><p>Revisit <code class="docutils literal notranslate"><span class="pre">fibonacci</span></code> and apply <code class="docutils literal notranslate"><span class="pre">&#64;cache</span></code> to it.</p></li>
-<li><p>Show how you can’t use <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> if you don’t define the function (e.g. if you import it).</p></li>
-<li><p>Demonstrate:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">factorial</span>
-<span class="n">factorial</span> <span class="o">=</span> <span class="n">cache</span><span class="p">(</span><span class="n">factorial</span><span class="p">)</span>
+<p>As it turns out, the at sign <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax for decorators is also support by class definitions, so classes can be decorated when defined:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nd">@decorator</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Cls</span><span class="p">:</span>
+    <span class="o">...</span>
 </pre></div>
 </div>
-</li>
-<li><p>Emphasize: both approaches are identical in effect.</p></li>
-</ol>
-<p><strong>Closing note</strong>: “From now on, we’ll mostly use the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax for clarity.”</p>
-</section>
-<hr class="docutils" />
-<section id="lesson-3-decorator-mindset-enhancing-orthogonal-functionality">
-<h2>🎥 Lesson 3. Decorator Mindset: Enhancing Orthogonal Functionality<a class="headerlink" href="#lesson-3-decorator-mindset-enhancing-orthogonal-functionality" title="Link to this heading">#</a></h2>
-<p><strong>(Deviation: This concept is pulled out as its own lesson for clarity.)</strong></p>
-<p><strong>Goal</strong>: Cement the core purpose of decorators — adding orthogonal functionality cleanly.</p>
-<p><strong>Concepts</strong>:</p>
-<ul class="simple">
-<li><p>Orthogonal behavior = not core to function’s goal but still useful</p></li>
-<li><p>Examples of such behavior: caching, logging, timing, validation, etc.</p></li>
-</ul>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic simple">
-<li><p>Define “orthogonal” in simple terms.</p></li>
-<li><p>Give examples of functionality often added via decorators.</p></li>
-<li><p>Tie it to SOLID principles (lightly) — single responsibility.</p></li>
-<li><p>Show how decorators help write cleaner, more reusable code.</p></li>
-</ol>
-<p><strong>Optional</strong>: List a few decorators learners may have seen (<code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;app.route</span></code>, etc).</p>
-<p><strong>Wrap-up</strong>: “You now know the <em>why</em> behind decorators — the <em>how</em> comes next.”</p>
-</section>
-<hr class="docutils" />
-<section id="lesson-4-exercise-break-reimplement-and-apply-cache-and-timed-decorators">
-<h2>📘 Lesson 4. Exercise Break: Reimplement and Apply Cache and Timed Decorators<a class="headerlink" href="#lesson-4-exercise-break-reimplement-and-apply-cache-and-timed-decorators" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Encourage recall and hands-on practice with both decorators.</p>
-<p><strong>Instructions (in the written reference)</strong>:</p>
-<ul class="simple">
-<li><p>Implement a general <code class="docutils literal notranslate"><span class="pre">&#64;cache</span></code> decorator using <code class="docutils literal notranslate"><span class="pre">*args</span></code>.</p></li>
-<li><p>Implement a general <code class="docutils literal notranslate"><span class="pre">&#64;timed</span></code> decorator.</p></li>
-<li><p>Apply both to new functions (e.g. a slow prime checker or recursive exponentiation).</p></li>
-<li><p>Try stacking them — does the order matter?</p></li>
-</ul>
-<p><strong>Bonus exercise</strong>: Implement a decorator that logs every call to a function.</p>
-</section>
-<hr class="docutils" />
-<section id="lesson-5-solve-together-decorate-fibonacci-and-benchmark-it">
-<h2>🎥 Lesson 5. Solve Together: Decorate Fibonacci and Benchmark It<a class="headerlink" href="#lesson-5-solve-together-decorate-fibonacci-and-benchmark-it" title="Link to this heading">#</a></h2>
-<p><strong>Goal</strong>: Cement the idea of decorating functions in the wild.</p>
-<p><strong>Flow</strong>:</p>
-<ol class="arabic simple">
-<li><p>Re-implement a recursive <code class="docutils literal notranslate"><span class="pre">fibonacci</span></code>.</p></li>
-<li><p>Apply <code class="docutils literal notranslate"><span class="pre">&#64;cache</span></code> and time its execution.</p></li>
-<li><p>Add <code class="docutils literal notranslate"><span class="pre">&#64;timed</span></code> on top or below — demonstrate effect of decorator order.</p></li>
-<li><p>Print results and performance.</p></li>
-</ol>
-<p><strong>Concepts</strong>:</p>
-<ul class="simple">
-<li><p>Decorator stacking</p></li>
-<li><p>Order of evaluation</p></li>
-</ul>
-<p><strong>Bonus tip</strong>: Explain that decorator stacking reads “bottom-up”:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@a</span>
-<span class="nd">@b</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">():</span> <span class="o">...</span>
+<p>This is equivalent to</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Cls</span><span class="p">:</span>
+    <span class="o">...</span>
+
+<span class="n">Cls</span> <span class="o">=</span> <span class="n">decorator</span><span class="p">(</span><span class="n">Cls</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>becomes <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">a(b(f))</span></code>.</p>
-</section>
-<hr class="docutils" />
-<section id="section-summary">
-<h2>✅ Section Summary<a class="headerlink" href="#section-summary" title="Link to this heading">#</a></h2>
-<p>By the end of this section, the learner:</p>
-<ul class="simple">
-<li><p>Understands what decorators are formally</p></li>
-<li><p>Can use the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> syntax with confidence</p></li>
-<li><p>Can manually apply decorators to existing functions</p></li>
-<li><p>Can stack decorators and understand the order of application</p></li>
-<li><p>Knows when to use decorators for orthogonal enhancements</p></li>
-</ul>
-<hr class="docutils" />
-<p>Shall we move on to Section 3, or would you like to revise anything in Section 2?</p>
-</section>
+<p>Now you know that it is <em>possible</em> to decorate a class…
+But should you do it?
+There are good use-cases for decorators for classes, but there is one thing that you must understand about decorated classes first.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -625,7 +509,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./_ideas"
+            path: "./decorating-classes"
         },
         predefinedOutput: true
     }
@@ -642,32 +526,30 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Decorating classes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="replacing-classes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Replacing classes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-1-the-decorator-pattern-and-its-syntax">🎥 Lesson 1. The Decorator Pattern and Its Syntax</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-2-applying-decorators-with-and-without">🎥 Lesson 2. Applying Decorators with and without <code class="docutils literal notranslate"><span class="pre">@</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-3-decorator-mindset-enhancing-orthogonal-functionality">🎥 Lesson 3. Decorator Mindset: Enhancing Orthogonal Functionality</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-4-exercise-break-reimplement-and-apply-cache-and-timed-decorators">📘 Lesson 4. Exercise Break: Reimplement and Apply Cache and Timed Decorators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-5-solve-together-decorate-fibonacci-and-benchmark-it">🎥 Lesson 5. Solve Together: Decorate Fibonacci and Benchmark It</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-summary">✅ Section Summary</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

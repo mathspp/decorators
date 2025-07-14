@@ -129,3 +129,18 @@ The article mixes “wraps” and decorator-with-arguments topics. Here, I’m g
 2. **Quiz or Recap Exercise Suggestions**
 3. **Next Steps: Fun Projects and Decorators in the Real World**
 4. **Outro and Thanks**
+
+
+---
+
+Create a section with exercises on replicating decorators from the std library, like
+
+ - functools.lru_cache and functools.cache
+ - property
+ - staticmethod and classmethod
+ - contextmanager
+ - dataclass
+ - functools.total_ordering
+ - functools.wraps
+
+Talk about creating decorators for instance methods.

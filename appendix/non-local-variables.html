@@ -63,7 +63,7 @@
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Exercises" href="../decorating-classes/exercises.html" />
+    <link rel="prev" title="Summary" href="../decorating-classes/summary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -252,10 +252,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/decorator-with-attributes.html">Decorator with attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/customisable-class-based-decorator.html">Customisable class-based decorators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes-as-decorators/summary.html">Summary</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../decorating-classes/index.html">Decorating classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/classes-are-objects.html">Classes can be decorated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/replacing-classes.html">Replacing classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/a-decorator-for-a-class.html">A decorator for a class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/patching-methods.html">Patching methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/returning-the-class.html">Returning the class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../decorating-classes/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorating-classes/summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -464,7 +471,7 @@ document.write(`
 <p>To access non-local variables in closures, use the keyword <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code>.
 Non-local variables are variables that are neither local, nor global.
 For example, the variable <code class="docutils literal notranslate"><span class="pre">counter</span></code> is a non-local variable from the point of view of the function <code class="docutils literal notranslate"><span class="pre">inner</span></code> in the snippet below:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
     <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">inner</span><span class="p">():</span>
@@ -473,7 +480,7 @@ For example, the variable <code class="docutils literal notranslate"><span class
 </pre></div>
 </div>
 <p>Non-local variables can be read from inner functions without any special keywords:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
     <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">inner</span><span class="p">():</span>
@@ -487,7 +494,7 @@ For example, the variable <code class="docutils literal notranslate"><span class
 </pre></div>
 </div>
 <p>To write to them, you need to declare the variable as non-local with the keyword <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code>:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
     <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">inner</span><span class="p">():</span>
@@ -504,7 +511,7 @@ For example, the variable <code class="docutils literal notranslate"><span class
 </div>
 <p>Note how you first declare the variable as non-local with <code class="docutils literal notranslate"><span class="pre">nonlocal</span> <span class="pre">counter</span></code> and only then you’re allowed to write to it.</p>
 <p>By the way, since you can read the value of a variable without using the keyword <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code>, you can also mutate the value of a variable without the keyword <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code>:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
     <span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">inner</span><span class="p">():</span>
@@ -551,12 +558,12 @@ For example, the variable <code class="docutils literal notranslate"><span class
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../decorating-classes/exercises.html"
+       href="../decorating-classes/summary.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercises</p>
+        <p class="prev-next-title">Summary</p>
       </div>
     </a>
 </div>

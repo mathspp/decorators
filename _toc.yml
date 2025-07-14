@@ -69,9 +69,16 @@ parts:
         - file: classes-as-decorators/decorator-with-attributes.md
         - file: classes-as-decorators/customisable-class-based-decorator.md
         - file: classes-as-decorators/exercises.md
+        - file: classes-as-decorators/summary.md
       - file: decorating-classes/index.md
         sections:
+        - file: decorating-classes/classes-are-objects.md
+        - file: decorating-classes/replacing-classes.md
+        - file: decorating-classes/a-decorator-for-a-class.md
+        - file: decorating-classes/patching-methods.md
+        - file: decorating-classes/returning-the-class.md
         - file: decorating-classes/exercises.md
+        - file: decorating-classes/summary.md
   - caption: Appendix
     chapters:
       - file: appendix/non-local-variables.md
